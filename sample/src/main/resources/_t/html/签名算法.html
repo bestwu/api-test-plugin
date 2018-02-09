@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="renderer" content="webkit"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>签名算法</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px;
+      overflow: auto;
+      color: #444;
+      font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.5em
+    }
+
+    a {
+      outline: none;
+      color: #0645ad;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #0645ad;
+    }
+
+    a:hover {
+      color: #06e;
+    }
+
+    a:active {
+      color: #faa700;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: normal;
+      color: #111;
+      line-height: 1em;
+    }
+
+    h4, h5, h6 {
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+      border-bottom: 1px solid silver;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+
+    h6 {
+      font-size: 0.9em;
+    }
+
+    blockquote {
+      color: #666666;
+      margin: 0;
+      padding-left: 3em;
+      border-left: 0.5em #EEE solid;
+    }
+
+    hr {
+      display: block;
+      height: 2px;
+      border: 0;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #eee;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    pre, code {
+      color: #000;
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 0.94em; /* 0.94 = 0.88 + (1.00 - 0.88) / 2 */
+      border-radius: 3px;
+      background-color: #F8F8F8;
+      border: 1px solid #CCC;
+    }
+
+    pre {
+      white-space: pre;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      padding: 5px;
+    }
+
+    pre code {
+      border: 0px !important;
+      background: transparent !important;
+      line-height: 1.3em;
+    }
+
+    code {
+      padding: 0 3px 0 3px;
+    }
+
+    sub, sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    ul, ol {
+      margin: 1em 0;
+      padding: 0 0 0 2em;
+    }
+
+    li p:last-child {
+      margin: 0
+    }
+
+    dd {
+      margin: 0 0 0 2em;
+    }
+
+    img {
+      border: 0;
+      -ms-interpolation-mode: bicubic;
+      vertical-align: middle;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td, th {
+      vertical-align: top;
+      padding: 4px 10px;
+      border: 1px solid #bbb;
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    tr:nth-child(even) td, tr:nth-child(even) th {
+      background: #efefef;
+    }
+
+    tr:nth-child(odd) td:hover, tr:nth-child(odd) th:hover {
+      background: #efefef;
+    }
+
+    tr:nth-child(even) td:hover, tr:nth-child(even) th:hover {
+      background: white;
+    }
+
+    table th {
+      white-space: nowrap;
+    }
+
+    .collapsed .arrow {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      background-repeat: no-repeat;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAQAAABedl5ZAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH4gETBRUpm1h9ewAAABBjYU52AAAB1QAAAJ8AAAHIAAAASAXkU10AAACCSURBVBjTY2CgEEjOlzwvyY9VQvO/3n+ZCwhJJhhDiZ+LgZVBSJ/5IEwSLnWkSmoHA5okHPzX8N1u/N8YzVi4pNVziKTcQiQDGRgYGKTKv0kwMDAwCNxZOgXDjcb/jf/b3T7n8J8FrwRcVon/BwMDA/edCamGRxj/YLgPwyiEJKoEAD8oOC9sjnUSAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTE4VDIxOjIxOjQxKzA4OjAwjLJP7QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0xOFQyMToyMTo0MSswODowMP3v91EAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC');
+    }
+
+    .collapsed + ul {
+      display: none;
+    }
+
+    .expanded + ul {
+      display: flow;
+    }
+
+    .expanded .arrow {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      background-repeat: no-repeat;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH4gETBRUpm1h9ewAAABBjYU52AAAB1QAAAJ8AAAE5AAAAd8bWB40AAAB0SURBVBjTxc2hDYAwFATQC6kgGJD8DagjqUGRLsAOMFnHYAsWqEAyxiGglIRWc+7+S+4DP0WcuEwTp6kZDu+mpG6HAgBm4FjENXMFoBwOAKDa7OgNDTVl1zQ0HP1m79nI/UNUz9fIH3pzggJPa5IuZpehVE7yZEJPmBmauAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wMS0xOFQyMToyMTo0MSswODowMIyyT+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDEtMThUMjE6MjE6NDErMDg6MDD97/dRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg==');
+    }
+
+    .topAnchor {
+      display: block;
+      position: fixed;
+      z-index: 1001;
+      bottom: 10px;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      background-color: #c9c9c9;
+    }
+
+    .topAnchor a {
+      display: block;
+      padding: 12px;
+      background: rgba(255, 255, 255, .5);
+    }
+
+    .topAnchor a span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfeAhkNNgFF8q46AAAAd0lEQVQ4y+2RoQ2AMBAADwGisjBPh2CLahzrgMEwAmuVYIogBFIa+iHB9eT/3ZuHzA8U0WlFC8xssiMlPQ5HTynVVzxelpz6xIRnTSWnPqDRjKnk0msAmvck1BNJQffQ70kXPkCxRPQrWVDhwmAj+pFYjOQjmc/sNUsv1+vGNvUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMDktMTdUMTU6MTk6NDErMDg6MDD2piBqAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE0LTAyLTI1VDEzOjU0OjAxKzA4OjAwtu6diAAAAE10RVh0c29mdHdhcmUASW1hZ2VNYWdpY2sgNy4wLjEtNiBRMTYgeDg2XzY0IDIwMTYtMDktMTcgaHR0cDovL3d3dy5pbWFnZW1hZ2ljay5vcmfd2aVOAAAAGHRFWHRUaHVtYjo6RG9jdW1lbnQ6OlBhZ2VzADGn/7svAAAAGHRFWHRUaHVtYjo6SW1hZ2U6OkhlaWdodAAxMjhDfEGAAAAAF3RFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADEyONCNEd0AAAAZdEVYdFRodW1iOjpNaW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTM5MzMwNzY0MWqa+K0AAAASdEVYdFRodW1iOjpTaXplADEuNjlLQvWCP7QAAABfdEVYdFRodW1iOjpVUkkAZmlsZTovLy9ob21lL3d3d3Jvb3Qvc2l0ZS93d3cuZWFzeWljb24ubmV0L2Nkbi1pbWcuZWFzeWljb24uY24vc3JjLzExMzc3LzExMzc3NDgucG5nniX3RQAAAABJRU5ErkJggg==");
+    }
+
+    @media (min-width: 800px) {
+      body {
+        padding-left: 0;
+        padding-top: 0;
+      }
+
+      .catalog {
+        position: fixed;
+        width: 24%;
+        height: 100%;
+
+        overflow: auto;
+        border-right: 1px solid #e5e5e5;
+        border-bottom: 0;
+        background-color: #ededed;
+      }
+
+      .content {
+        position: absolute;
+        left: 24%;
+        width: 74%;
+        height: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="catalog">
+  <h3>&nbsp;&nbsp;<a href="index.html">复合肥CRM APP2.0</a></h3>
+<ul>
+  <li>
+  <p><a href="index.html">系统介绍</a></p></li>
+  <li>
+  <p><a href="业务相关错误码.html">业务相关错误码</a></p></li>
+  <li><a href="接口授权说明.html">接口授权说明</a></li>
+  <li><a href="签名算法.html">签名算法</a></li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>1 APP用户</a>
+    <ul>
+      <li><a href="01-APP用户.html#1-1-登录">1.1 登录</a></li>
+      <li><a href="01-APP用户.html#1-2-修改密码">1.2 修改密码</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>2 首页Banner</a>
+    <ul>
+      <li><a href="02-首页Banner.html#2-1-列表">2.1 列表</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>3 产品分类</a>
+    <ul>
+      <li><a href="03-产品分类.html#3-1-列表">3.1 列表</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>4 产品</a>
+    <ul>
+      <li><a href="04-产品.html#4-1-列表">4.1 列表</a></li>
+      <li><a href="04-产品.html#4-2-单个详情">4.2 单个详情</a></li>
+      <li><a href="04-产品.html#4-3-近期购买">4.3 近期购买</a></li>
+      <li><a href="04-产品.html#4-4-猜你喜欢">4.4 猜你喜欢</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>5 客户</a>
+    <ul>
+      <li><a href="05-客户.html#5-1-我的首页">5.1 我的首页</a></li>
+      <li><a href="05-客户.html#5-2-个人信息">5.2 个人信息</a></li>
+      <li><a href="05-客户.html#5-3-任务排名">5.3 任务排名</a></li>
+      <li><a href="05-客户.html#5-4-发票信息">5.4 发票信息</a></li>
+      <li><a href="05-客户.html#5-5-列表-员工端-">5.5 列表（员工端）</a></li>
+      <li><a href="05-客户.html#5-6-详情-员工端-">5.6 详情（员工端）</a></li>
+      <li><a href="05-客户.html#5-7-客户资金-员工端-">5.7 客户资金（员工端）</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>6 客户账户</a>
+    <ul>
+      <li><a href="06-客户账户.html#6-1-资金明细">6.1 资金明细</a></li>
+      <li><a href="06-客户账户.html#6-2-可用现金">6.2 可用现金</a></li>
+      <li><a href="06-客户账户.html#6-3-承兑">6.3 承兑</a></li>
+      <li><a href="06-客户账户.html#6-4-使用历史记录">6.4 使用历史记录</a></li>
+      <li><a href="06-客户账户.html#6-5-授信">6.5 授信</a></li>
+      <li><a href="06-客户账户.html#6-6-授信子类列表">6.6 授信子类列表</a></li>
+      <li><a href="06-客户账户.html#6-7-授信详细">6.7 授信详细</a></li>
+      <li><a href="06-客户账户.html#6-8-其他资金">6.8 其他资金</a></li>
+      <li><a href="06-客户账户.html#6-9-返利">6.9 返利</a></li>
+      <li><a href="06-客户账户.html#6-10-返利明细">6.10 返利明细</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>7 订单</a>
+    <ul>
+      <li><a href="07-订单.html#7-1-列表">7.1 列表</a></li>
+      <li><a href="07-订单.html#7-2-单个详情">7.2 单个详情</a></li>
+      <li><a href="07-订单.html#7-3-物流跟踪">7.3 物流跟踪</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>8 员工</a>
+    <ul>
+      <li><a href="08-员工.html#8-1-我的首页">8.1 我的首页</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+</div>
+<div class="content">
+  <h2><a href="#0签名算法" name="0签名算法">签名算法</a></h2>
+<p>签名由拼接的参数加上clientSecret值进行MD5加密组成.</p>
+<pre><code class="properties">clientSecret = abc
+</code></pre>
+<ul>
+  <li>
+  <p>筛选<br/>获取所有请求参数，不包括字节类型参数，如文件、字节流，不包括签名参数“sign”。</p></li>
+  <li>
+  <p>排序<br/>将筛选的参数按照参数名第一个字符的键值ASCII码递增排序（字母升序排序），如果遇到相同字符则按照第二个字符的键值ASCII码递增排序，以此类推。如果遇到一个参数多个值（如：q=1&amp;q=2）则转换为一个值为英文逗号（,）分隔的参数（如：q=1,2）</p></li>
+  <li>
+  <p>拼接<br/>将排序后的参数与其对应值，组合成“参数=参数值”的格式,加上clientSecret值，并且把这些参数用&amp;字符连接起来。待签名字符串为"UTF-8"编码。此时生成的字符串为待签名字符串。<br/>例如下面的请求示例，参数值都是示例，开发者参考格式即可：</p></li>
+</ul>
+<pre><code>      REQUEST URL: https://www.xxx.com?page=0&amp;size=25&amp;type=0&amp;showTime=&amp;start=0&amp;limit=25
+      假如clientSecret为:alkdfjaso
+      组成的待签名字符串为：
+      
+        limit=25&amp;page=0&amp;size=25&amp;start=0&amp;type=0&amp;alkdfjaso
+      
+</code></pre>
+<blockquote>
+  <p>注意：</p>
+  <blockquote>
+    <p>没有值的参数无需传递，也无需包含到待签名数据中；</p>
+    <p>待签名数据应该是原生值而不是URL Encoding之后的值。例如：调用某接口需要对请求参数email进行数字签名，那么待签名数据应该是email=test@msn.com，而不是email=test%40msn.com。</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>使用MD5对待签名字符串进行加密码。</li>
+</ul>
+<pre><code class="html"><br/>      待签名字符串为：limit=25&amp;page=0&amp;size=25&amp;start=0&amp;type=0&amp;alkdfjaso
+      
+      加密后值：26d595f645505e93a50600c1d72ba09d
+
+</code></pre>
+<h2><a href="#1签名传递方式" name="1签名传递方式">签名传递方式</a></h2>
+<ul>
+  <li>支持request.header、request.querystring、request.form等方式传递签名，签名参数名为："sign"。推荐使用request.header方便传递。</li>
+</ul>
+<pre><code><br/>Accept: application/json;version=1.0.b
+Accept-Language: zh-CN,en-US;q=0.5
+Accept-Encoding: gzip, deflate
+sign: 26d595f645505e93b05354cbf98109df
+
+或
+
+https://www.xxx.com?page=0&amp;size=25&amp;type=0&amp;showTime=&amp;start=0&amp;limit=25&amp;sign=26d595f645505e93b05354cbf98109df
+</code></pre>
+</div>
+<div class="topAnchor">
+  <a id="topAnchor" href="#">
+    <span></span>
+  </a>
+</div>
+</body>
+<script type="text/javascript">
+  function changeMargin() {
+    var docWidth = document.body.clientWidth;
+    if (docWidth < 800) {
+      document.getElementById("topAnchor").setAttribute("href", "index.html#")
+    }
+  }
+
+  changeMargin();
+  window.onresize = changeMargin;
+
+  function onTitleClick(e) {
+    if (e.className === "expanded") {
+      e.className = "collapsed";
+    } else {
+      e.className = "expanded";
+    }
+  }
+</script>

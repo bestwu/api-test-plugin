@@ -1,0 +1,1728 @@
+[{
+  "method": "GET",
+  "name": "单个详情",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"]
+  },
+  "resource": "产品",
+  "url": "/materialProducts/{materialId}",
+  "desc": "员工端无价格政策信息",
+  "version": ["2.0"],
+  "uriVariables": {
+    "materialId": "000000000020101659"
+  },
+  "results": {
+    "materialId": "000000000020101659",
+    "name": "54%桂湖18-18-18黄腐酸钾低氯黑色25KG",
+    "category": "黄腐酸钾",
+    "properties": {
+      "基本计量单位": "TO",
+      "物料组": "20100",
+      "物料类型": "ZERT",
+      "物料名称": "54%桂湖18-18-18黄腐酸钾低氯黑色25KG",
+      "物料大类": "54%18-18-18黄腐酸钾低氯黑色",
+      "总养分含量": "54%",
+      "生产工艺": "黄腐酸钾",
+      "配方结构": "18-18-18",
+      "规格": "25KG",
+      "颜色": "黑色",
+      "品类": "黄腐酸钾",
+      "品牌名称": "桂湖",
+      "大类编码": "0A",
+      "产品组": "50",
+      "产品组描述": "复合肥",
+      "物料组描述": "复合肥通用成品"
+    },
+    "saleTun": 689,
+    "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+    "picUrls": ["http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000", "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000", "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"],
+    "price": 1900.01,
+    "factorys": [{
+      "factoryId": "1070",
+      "factoryName": "眉山1号工厂"
+    }, {
+      "factoryId": "1072",
+      "factoryName": "应城嘉斯利专用工厂"
+    }, {
+      "factoryId": "1071",
+      "factoryName": "眉山2号工厂"
+    }]
+  }
+}, {
+  "method": "GET",
+  "name": "列表",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"],
+    "page^": ["1"],
+    "size^": ["20"],
+    "brand^": ["5465"],
+    "strain^": ["5016"],
+    "keyword^": [""]
+  },
+  "resource": "产品",
+  "url": "/materialProducts",
+  "desc": "员工端只展示图片及产品名称",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 20,
+    "total": 20,
+    "pages": 1,
+    "list": [{
+      "materialId": "000000000020101004",
+      "name": "51%嘉施利根动力17-17-17全水溶硝硫基白色25KG",
+      "category": "硝基水溶滴灌型",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101012",
+      "name": "40%撒威20-10-10中氯硝酸磷钾蓝色25KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101102",
+      "name": "40%土博士22-08-10中氯邮政专用蓝色25KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101106",
+      "name": "40%土博士24-11-05中氯邮政专用蓝色40KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101740",
+      "name": "NL NPK 22-9-9 9.5KG",
+      "category": "高塔硝氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101735",
+      "name": "T-58%土博士14-06-38+TE大量元素水溶硝硫基邮政专用粉状蓝色5KG",
+      "category": "多聚大量元素水溶肥",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101734",
+      "name": "40%桂湖26-06-08高塔中氯白色35KG",
+      "category": "高塔尿氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101730",
+      "name": "15%土博士15-00-00硝钙邮政专用白色25KG",
+      "category": "硝酸铵钙",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101729",
+      "name": "T-34%土博士30-04-00高塔硝基邮政专用黄色40KG",
+      "category": "硝铵磷",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101685",
+      "name": "40%桂湖24-09-07高塔硝氯基低氯红色40KG",
+      "category": "高塔硝氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101683",
+      "name": "T-40%嘉施利26-08-06缓释硝氯基红黄灰40KG",
+      "category": "缓释肥",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101682",
+      "name": "T-40%桂湖26-07-07缓释硝氯基红黄灰40KG",
+      "category": "缓释肥",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101677",
+      "name": "45%嘉施利25-14-06高塔中氯玉米白色40KG",
+      "category": "高塔尿氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101671",
+      "name": "40%凯利丰18-10-12高氯桉树蓝色25KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101666",
+      "name": "50%嘉施利18-06-26高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101665",
+      "name": "50%桂湖18-06-26高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101664",
+      "name": "T-48%奥利拉19-05-24高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101661",
+      "name": "30%桂湖15-06-09高氯枸磷湖北专用白色50KG",
+      "category": "常规中浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101660",
+      "name": "30%桂湖15-06-09高氯枸磷湖北专用白色40KG",
+      "category": "常规中浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101659",
+      "name": "54%桂湖18-18-18黄腐酸钾低氯黑色25KG",
+      "category": "黄腐酸钾",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "列表",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"],
+    "levels^": ["1"]
+  },
+  "resource": "产品分类",
+  "url": "/materialClasss",
+  "desc": "不传levels返回首页分类（根据返回数据levels分别展示品系/品牌，返回数据为有序数组，先品系后品牌）；levels=1时返回所有品牌；levels=2时返回所有品系；",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "list": [{
+      "id": "3314",
+      "levelName": "五禾丰",
+      "levels": "1",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/3314.png?reqid=10000"
+    }, {
+      "id": "3317",
+      "levelName": "桂湖",
+      "levels": "1",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/3317.png?reqid=10000"
+    }, {
+      "id": "3318",
+      "levelName": "嘉施利",
+      "levels": "1",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/3318.png?reqid=10000"
+    }, {
+      "id": "5454",
+      "levelName": "常规中浓度",
+      "levels": "1",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }]
+  }
+}, {
+  "method": "GET",
+  "name": "列表",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["4883e7ab06741b03a99ec466472e3baf"]
+  },
+  "resource": "首页Banner",
+  "url": "/banners",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "list": [{
+      "img": "http://localhost/banners/1.png",
+      "brand": "常规肥"
+    }, {
+      "img": "http://localhost/banners/2.png",
+      "brand": "氮肥"
+    }, {
+      "img": "http://localhost/banners/3.png",
+      "brand": "缓释肥"
+    }, {
+      "img": "http://localhost/banners/4.png",
+      "brand": "高塔肥"
+    }, {
+      "img": "http://localhost/banners/5.png",
+      "brand": "水溶肥"
+    }]
+  }
+}, {
+  "method": "PUT",
+  "name": "修改密码",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["d8c59a4b-8754-4ecb-bbb7-a3e74756c43d"],
+    "mobile&": ["13383209152"],
+    "oldPassword&": ["16cbfcf2a4fc56bbcbdb4165a98c025b"],
+    "newPassword&": ["NDMyMTEzMzgzMjA5MTUy"]
+  },
+  "resource": "APP用户",
+  "url": "/users/password",
+  "desc": "修改密码后将更新accessToken",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "accessToken": "d8ac7951-bac6-4300-86d6-4462766eddab",
+    "sourceChannel": "CUST"
+  }
+}, {
+  "method": "GET",
+  "name": "近期购买",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"],
+    "page^": ["1"],
+    "size^": ["20"]
+  },
+  "resource": "产品",
+  "url": "/materialProducts/recency",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 20,
+    "total": 20,
+    "pages": 1,
+    "list": [{
+      "materialId": "000000000020101004",
+      "name": "51%嘉施利根动力17-17-17全水溶硝硫基白色25KG",
+      "category": "硝基水溶滴灌型",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101012",
+      "name": "40%撒威20-10-10中氯硝酸磷钾蓝色25KG",
+      "category": "常规高浓度",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101102",
+      "name": "40%土博士22-08-10中氯邮政专用蓝色25KG",
+      "category": "常规高浓度",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101106",
+      "name": "40%土博士24-11-05中氯邮政专用蓝色40KG",
+      "category": "常规高浓度",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101740",
+      "name": "NL NPK 22-9-9 9.5KG",
+      "category": "高塔硝氯基",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101735",
+      "name": "T-58%土博士14-06-38+TE大量元素水溶硝硫基邮政专用粉状蓝色5KG",
+      "category": "多聚大量元素水溶肥",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101734",
+      "name": "40%桂湖26-06-08高塔中氯白色35KG",
+      "category": "高塔尿氯基",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101730",
+      "name": "15%土博士15-00-00硝钙邮政专用白色25KG",
+      "category": "硝酸铵钙",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101729",
+      "name": "T-34%土博士30-04-00高塔硝基邮政专用黄色40KG",
+      "category": "硝铵磷",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101685",
+      "name": "40%桂湖24-09-07高塔硝氯基低氯红色40KG",
+      "category": "高塔硝氯基",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101683",
+      "name": "T-40%嘉施利26-08-06缓释硝氯基红黄灰40KG",
+      "category": "缓释肥",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101682",
+      "name": "T-40%桂湖26-07-07缓释硝氯基红黄灰40KG",
+      "category": "缓释肥",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101677",
+      "name": "45%嘉施利25-14-06高塔中氯玉米白色40KG",
+      "category": "高塔尿氯基",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101671",
+      "name": "40%凯利丰18-10-12高氯桉树蓝色25KG",
+      "category": "常规高浓度",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101666",
+      "name": "50%嘉施利18-06-26高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101665",
+      "name": "50%桂湖18-06-26高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101664",
+      "name": "T-48%奥利拉19-05-24高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101661",
+      "name": "30%桂湖15-06-09高氯枸磷湖北专用白色50KG",
+      "category": "常规中浓度",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101660",
+      "name": "30%桂湖15-06-09高氯枸磷湖北专用白色40KG",
+      "category": "常规中浓度",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }, {
+      "materialId": "000000000020101659",
+      "name": "54%桂湖18-18-18黄腐酸钾低氯黑色25KG",
+      "category": "黄腐酸钾",
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "猜你喜欢",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"],
+    "page^": ["1"],
+    "size^": ["20"]
+  },
+  "resource": "产品",
+  "url": "/materialProducts/like",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 20,
+    "total": 20,
+    "pages": 1,
+    "list": [{
+      "materialId": "000000000020101004",
+      "name": "51%嘉施利根动力17-17-17全水溶硝硫基白色25KG",
+      "category": "硝基水溶滴灌型",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101012",
+      "name": "40%撒威20-10-10中氯硝酸磷钾蓝色25KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101102",
+      "name": "40%土博士22-08-10中氯邮政专用蓝色25KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101106",
+      "name": "40%土博士24-11-05中氯邮政专用蓝色40KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101740",
+      "name": "NL NPK 22-9-9 9.5KG",
+      "category": "高塔硝氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101735",
+      "name": "T-58%土博士14-06-38+TE大量元素水溶硝硫基邮政专用粉状蓝色5KG",
+      "category": "多聚大量元素水溶肥",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101734",
+      "name": "40%桂湖26-06-08高塔中氯白色35KG",
+      "category": "高塔尿氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101730",
+      "name": "15%土博士15-00-00硝钙邮政专用白色25KG",
+      "category": "硝酸铵钙",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101729",
+      "name": "T-34%土博士30-04-00高塔硝基邮政专用黄色40KG",
+      "category": "硝铵磷",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101685",
+      "name": "40%桂湖24-09-07高塔硝氯基低氯红色40KG",
+      "category": "高塔硝氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101683",
+      "name": "T-40%嘉施利26-08-06缓释硝氯基红黄灰40KG",
+      "category": "缓释肥",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101682",
+      "name": "T-40%桂湖26-07-07缓释硝氯基红黄灰40KG",
+      "category": "缓释肥",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101677",
+      "name": "45%嘉施利25-14-06高塔中氯玉米白色40KG",
+      "category": "高塔尿氯基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101671",
+      "name": "40%凯利丰18-10-12高氯桉树蓝色25KG",
+      "category": "常规高浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101666",
+      "name": "50%嘉施利18-06-26高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101665",
+      "name": "50%桂湖18-06-26高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101664",
+      "name": "T-48%奥利拉19-05-24高塔硫基白色50KG",
+      "category": "高塔尿硫基",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101661",
+      "name": "30%桂湖15-06-09高氯枸磷湖北专用白色50KG",
+      "category": "常规中浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101660",
+      "name": "30%桂湖15-06-09高氯枸磷湖北专用白色40KG",
+      "category": "常规中浓度",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }, {
+      "materialId": "000000000020101659",
+      "name": "54%桂湖18-18-18黄腐酸钾低氯黑色25KG",
+      "category": "黄腐酸钾",
+      "policies": ["每吨立减1000元", "年购买达1000吨享受坎级奖励"],
+      "price": 1900.01,
+      "picUrl": "http://10.0.2.72:8188/hollycrm-yuntu/upload/brandLogo/5454.png?reqid=10000"
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "我的首页",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["4883e7ab06741b03a99ec466472e3baf"]
+  },
+  "resource": "客户",
+  "url": "/custInfos/self",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "custId": "CUST000051",
+    "custName": "玛纳斯县农业技术推广中心植物医院北五岔一分院",
+    "customerType": "经销商",
+    "accountAvailable": 300000,
+    "marginAvailable": 120000,
+    "rebateAvailable": 80000,
+    "hasDeliveryOrder": true,
+    "needCheckAccount": true
+  }
+}, {
+  "method": "GET",
+  "name": "个人信息",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["4883e7ab06741b03a99ec466472e3baf"]
+  },
+  "resource": "客户",
+  "url": "/custInfos/info",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "custId": "CUST000051",
+    "custName": "玛纳斯县农业技术推广中心植物医院北五岔一分院",
+    "legalPersonName": "张颖贤",
+    "legalPersonCertno": "652324197611303812",
+    "businessLicenceNo": "91652324MA775PXX1L",
+    "phone": "18099358662",
+    "fax": "028-88888888",
+    "mobile": "18099358662",
+    "detailedAddress": "新疆维吾尔自治区昌吉回族自治州玛纳斯县北五岔镇乡道3号",
+    "saleInfo": {
+      "customerService": "复肥",
+      "customerType": "经销商",
+      "deliveryPlant": "应城，眉山"
+    }
+  }
+}, {
+  "method": "GET",
+  "name": "资金明细",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"],
+    "fundType^": ["01"],
+    "page^": ["1"],
+    "size^": ["20"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/fundTranDetailFlows",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 20,
+    "total": 12387,
+    "pages": 620,
+    "list": [{
+      "flowNo": "FUND00126B",
+      "serviceType": "01",
+      "fundType": "04",
+      "inputDate": 1509630706000,
+      "addAmt": 2651183.16,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND00126C",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509630718000,
+      "addAmt": 25450,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND00126D",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509630732000,
+      "addAmt": 1190,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND001276",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509631176000,
+      "addAmt": 363390,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND001277",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509631177000,
+      "addAmt": 599.32,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND001278",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509631184000,
+      "addAmt": 50000,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND00127B",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509631202000,
+      "addAmt": 26794.64,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND00129C",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509631235000,
+      "addAmt": 1913.69,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND00129E",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509631253000,
+      "addAmt": 1700.65,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0013B5",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509632324000,
+      "addAmt": 6100,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0013E0",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509632423000,
+      "addAmt": 29.58,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0013E8",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509632440000,
+      "addAmt": 8244.58,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0013EF",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509632461000,
+      "addAmt": 57.5,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0013F2",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509632478000,
+      "addAmt": 10000,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0013FB",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509632507000,
+      "addAmt": 13487.5,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND00149F",
+      "serviceType": "01",
+      "fundType": "03",
+      "inputDate": 1509635147000,
+      "addAmt": 2400,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND00150B",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509636365000,
+      "addAmt": 8715.42,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0016B5",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509931216000,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0016B9",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509931216000,
+      "plusAmt": 0
+    }, {
+      "flowNo": "FUND0016BD",
+      "serviceType": "01",
+      "fundType": "01",
+      "inputDate": 1509931231000,
+      "plusAmt": 0
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "承兑",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["4883e7ab06741b03a99ec466472e3baf"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/availableAcceptance",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "amount": 100000,
+    "accountInfos": [{
+      "serviceType": "复肥",
+      "availableBalance": 30000,
+      "records": [{
+        "priceBatch": "20170621",
+        "childrenAccountType": "05",
+        "amt": 30000,
+        "status": 0,
+        "opTime": 1517898554071,
+        "orderId": ""
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "04",
+        "amt": 30000,
+        "status": 1,
+        "opTime": 1517898554071
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "05",
+        "amt": 30000,
+        "status": 2,
+        "opTime": 1517898554071,
+        "orderId": "ORD00009A171104"
+      }]
+    }, {
+      "serviceType": "盐",
+      "availableBalance": 30000,
+      "records": [{
+        "priceBatch": "20170621",
+        "childrenAccountType": "05",
+        "amt": 30000,
+        "status": 0,
+        "opTime": 1517898554071,
+        "orderId": ""
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "04",
+        "amt": 30000,
+        "status": 1,
+        "opTime": 1517898554071
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "05",
+        "amt": 30000,
+        "status": 2,
+        "opTime": 1517898554071,
+        "orderId": "ORD00009A171104"
+      }]
+    }]
+  }
+}, {
+  "method": "GET",
+  "name": "可用现金",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["4883e7ab06741b03a99ec466472e3baf"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/availableCash",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "amount": 100000,
+    "accountInfos": [{
+      "serviceType": "复肥",
+      "availableBalance": 30000,
+      "records": [{
+        "priceBatch": "20170621",
+        "childrenAccountType": "01",
+        "amt": 30000,
+        "status": 0,
+        "opTime": 1517898555976,
+        "orderId": ""
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "01",
+        "amt": 30000,
+        "status": 1,
+        "opTime": 1517898555976
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "01",
+        "amt": 30000,
+        "status": 2,
+        "opTime": 1517898555976,
+        "orderId": "ORD00009A171104"
+      }]
+    }, {
+      "serviceType": "盐",
+      "availableBalance": 30000,
+      "records": [{
+        "priceBatch": "20170621",
+        "childrenAccountType": "01",
+        "amt": 30000,
+        "status": 0,
+        "opTime": 1517898555976,
+        "orderId": ""
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "01",
+        "amt": 30000,
+        "status": 1,
+        "opTime": 1517898555976
+      }, {
+        "priceBatch": "20170621",
+        "childrenAccountType": "01",
+        "amt": 30000,
+        "status": 2,
+        "opTime": 1517898555976,
+        "orderId": "ORD00009A171104"
+      }]
+    }]
+  }
+}, {
+  "method": "GET",
+  "name": "使用历史记录",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["4883e7ab06741b03a99ec466472e3baf"],
+    "page^": ["1"],
+    "size^": ["20"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/records",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 3,
+    "total": 3,
+    "pages": 1,
+    "list": [{
+      "priceBatch": "20170621",
+      "childrenAccountType": "01",
+      "amt": 30000,
+      "status": 0,
+      "opTime": 1517898556791,
+      "orderId": ""
+    }, {
+      "priceBatch": "20170621",
+      "childrenAccountType": "01",
+      "amt": 30000,
+      "status": 1,
+      "opTime": 1517898556791
+    }, {
+      "priceBatch": "20170621",
+      "childrenAccountType": "01",
+      "amt": 30000,
+      "status": 2,
+      "opTime": 1517898556791,
+      "orderId": "ORD00009A171104"
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "授信",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["2beb03d4-c19c-4486-8a90-f2cd1ff0b8b0"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/availableCredit",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 2,
+    "total": 2,
+    "pages": 1,
+    "list": [{
+      "serviceType": "01",
+      "accountInfos": [{
+        "childrenAccountType": "06",
+        "availableBalance": 0,
+        "alreadyRepayment": 22486,
+        "needPayment": 0
+      }, {
+        "childrenAccountType": "07",
+        "availableBalance": 0,
+        "alreadyRepayment": 2486,
+        "needPayment": 0
+      }, {
+        "childrenAccountType": "08",
+        "availableBalance": 0,
+        "alreadyRepayment": 0,
+        "needPayment": 0
+      }]
+    }, {
+      "serviceType": "02",
+      "accountInfos": [{
+        "childrenAccountType": "06",
+        "availableBalance": 0,
+        "alreadyRepayment": 0,
+        "needPayment": 0
+      }, {
+        "childrenAccountType": "07",
+        "availableBalance": 0,
+        "alreadyRepayment": 0,
+        "needPayment": 0
+      }, {
+        "childrenAccountType": "08",
+        "availableBalance": 0,
+        "alreadyRepayment": 0,
+        "needPayment": 0
+      }]
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "授信子类列表",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["2beb03d4-c19c-4486-8a90-f2cd1ff0b8b0"],
+    "serviceType&": ["01"],
+    "childrenAccountType&": ["06"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/availableCredit/children",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 3,
+    "total": 3,
+    "pages": 1,
+    "list": [{
+      "accountId": "ACCT0011C9",
+      "childrenAccountType": "06",
+      "availableBalance": 0,
+      "alreadyRepayment": 0,
+      "needPayment": 0,
+      "endDate": 0,
+      "overdays": 0
+    }, {
+      "accountId": "ACCT00114C",
+      "childrenAccountType": "06",
+      "availableBalance": 0,
+      "alreadyRepayment": 20000,
+      "needPayment": 0,
+      "endDate": 0,
+      "overdays": 6
+    }, {
+      "accountId": "ACCT001267",
+      "childrenAccountType": "06",
+      "availableBalance": 0,
+      "alreadyRepayment": 2486,
+      "needPayment": 0,
+      "endDate": 0,
+      "overdays": 7
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "授信详细",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["2beb03d4-c19c-4486-8a90-f2cd1ff0b8b0"]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/availableCredit/{accountId}",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {
+    "accountId": "1000046457"
+  },
+  "results": {
+    "accountId": "1000046457",
+    "childrenAccountType": "06",
+    "availableBalance": 0,
+    "alreadyRepayment": 47525,
+    "needPayment": 0,
+    "approvedAmount": 47525,
+    "FundCreditFlow_beginDate": 1509206400000,
+    "FundCreditFlow_endDate": 1509292800000,
+    "FundCreditFlow_repayDate": 1509379200000,
+    "serviceType": "01",
+    "custName": "鲁山县维钊农资商行",
+    "saleCompany": "成都云图控股股份有限公司",
+    "rate": 2,
+    "FundCreditFlow_inputDate": 1512282645000
+  }
+}, {
+  "method": "GET",
+  "name": "其他资金",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["2beb03d4-c19c-4486-8a90-f2cd1ff0b8b0"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/other",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 2,
+    "total": 2,
+    "pages": 1,
+    "list": [{
+      "childrenAccountType": "02",
+      "amount": 8002,
+      "accountInfos": [{
+        "accountId": "ACCT001148",
+        "accountBalance": 5002,
+        "serviceType": "01"
+      }, {
+        "accountId": "ACCT001152",
+        "accountBalance": 3000,
+        "serviceType": "02"
+      }]
+    }, {
+      "childrenAccountType": "03",
+      "amount": 8003,
+      "accountInfos": [{
+        "accountId": "ACCT001149",
+        "accountBalance": 3003,
+        "serviceType": "01"
+      }, {
+        "accountId": "ACCT001153",
+        "accountBalance": 5000,
+        "serviceType": "02"
+      }]
+    }],
+    "page": 1
+  }
+}, {
+  "method": "POST",
+  "name": "登录",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "mobile&": ["13598737262"],
+    "password&": ["f26a4c4e94eeae5373c5a3ad355defcf"]
+  },
+  "resource": "APP用户",
+  "url": "/users/accessToken",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "accessToken": "fa7f6321-da12-4756-9f4e-7ffdb586dcc0",
+    "sourceChannel": "CUST"
+  }
+}, {
+  "method": "GET",
+  "name": "返利",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["fa7f6321-da12-4756-9f4e-7ffdb586dcc0"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/rebate",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 2,
+    "total": 2,
+    "pages": 1,
+    "list": [{
+      "availableBalance": 0,
+      "lockAmount": 0,
+      "serviceType": "01"
+    }, {
+      "availableBalance": 0,
+      "lockAmount": 0,
+      "serviceType": "02"
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "返利明细",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["fa7f6321-da12-4756-9f4e-7ffdb586dcc0"],
+    "page^": ["1"],
+    "size^": ["20"],
+    "custId^": [""]
+  },
+  "resource": "客户账户",
+  "url": "/custAccountInfos/rebate/detail",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 1,
+    "total": 0,
+    "pages": 0,
+    "list": [{
+      "fundType": "09",
+      "inputDate": 1517969805304,
+      "addAmt": 100,
+      "plusAmt": 0
+    }],
+    "page": 0
+  }
+}, {
+  "method": "GET",
+  "name": "单个详情",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"]
+  },
+  "resource": "订单",
+  "url": "/ordOrders/{orderId}",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {
+    "orderId": "ORD00009A171104"
+  },
+  "results": {
+    "orderId": "ORD00009A171104",
+    "sendFactory": "应城市新都化工复合肥有限公司工厂",
+    "transport": "火运",
+    "destination": "黎塘",
+    "payType": "现金",
+    "payAmout": 77437,
+    "actualAmout": 77437,
+    "discountAmount": 0,
+    "qty": 36.7,
+    "transportAmout": 0,
+    "handlingCharges": 0,
+    "cash": 77437,
+    "status": "06",
+    "createTime": 1509779345000,
+    "payTime": 1517990394083,
+    "finishTime": 1517990394083,
+    "receiveName": "钟强",
+    "receiverPhone": "13878655856",
+    "receiveAdd": "广西壮族自治区南宁市宾阳县武陵镇广西壮族自治区南宁市宾阳县武陵镇",
+    "priceBatch": "20170620",
+    "postTime": 1517990394083,
+    "materials": [{
+      "materialId": "000000000020100182",
+      "qty": 36.7,
+      "price": 1915,
+      "materialName": "48%洋洋16-16-16中氯白色50KG",
+      "category": "3*16",
+      "picUrl": "upload/brandLogo/5454.png",
+      "payPrice": 2110
+    }],
+    "sendQty": 0
+  }
+}, {
+  "method": "GET",
+  "name": "物流跟踪",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"]
+  },
+  "resource": "订单",
+  "url": "/ordOrders/{orderId}/deliveryInfo",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {
+    "orderId": "ORD000259171116"
+  },
+  "results": {
+    "qty": 20.0,
+    "sendQty": 20.0,
+    "deliveryInfos": [{
+      "postTime": 1510910934000,
+      "qty": 10.0,
+      "deliveryStatus": "已发货"
+    }, {
+      "postTime": 1510910934000,
+      "qty": 7.0,
+      "deliveryStatus": "已发货"
+    }, {
+      "postTime": 1510910934000,
+      "qty": 3.0,
+      "deliveryStatus": "已发货"
+    }]
+  }
+}, {
+  "method": "GET",
+  "name": "任务排名",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["4883e7ab06741b03a99ec466472e3baf"],
+    "taskListType^": ["0"]
+  },
+  "resource": "客户",
+  "url": "/custInfos/taskList",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "yearTargetCoefficient": 1000.0,
+    "coefficient": 450.0,
+    "reachs": [{
+      "area": "新都地区",
+      "num": 24
+    }, {
+      "area": "四川省",
+      "num": 1899
+    }],
+    "month": {
+      "shipments": 55.0,
+      "areas": [{
+        "area": "新都地区",
+        "num": 24
+      }, {
+        "area": "四川省",
+        "num": 1899
+      }, {
+        "area": "全国",
+        "num": 1899
+      }]
+    },
+    "quarter": {
+      "shipments": 155.0,
+      "areas": [{
+        "area": "新都地区",
+        "num": 24
+      }, {
+        "area": "四川省",
+        "num": 1899
+      }, {
+        "area": "全国",
+        "num": 1899
+      }]
+    },
+    "year": {
+      "shipments": 450.0,
+      "areas": [{
+        "area": "新都地区",
+        "num": 24
+      }, {
+        "area": "四川省",
+        "num": 1899
+      }, {
+        "area": "全国",
+        "num": 1899
+      }]
+    }
+  }
+}, {
+  "method": "GET",
+  "name": "发票信息",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["ac305a225b60a72541191ad21076fc82"]
+  },
+  "resource": "客户",
+  "url": "/custInfos/invoice",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "invoiceId": "INVO00164",
+    "invoiceCompany": "开化县穗丰农资有限公司",
+    "invoiceType": "公司",
+    "taxpayerIdentificationNum": "91330824056878621H",
+    "invoiceCompanyAddress": "开化县芹阳办事处解放街92号",
+    "invoiceConpanyPhone": "028-88888888",
+    "bank": "B0000148",
+    "account": "1209290109000173986"
+  }
+}, {
+  "method": "GET",
+  "name": "我的首页",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["d187f527-47e7-4b51-a90b-595b21f5f38a"]
+  },
+  "resource": "员工",
+  "url": "/employees/self",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "empName": "杜亚",
+    "custNum": 2870,
+    "newCustNum": 1,
+    "newOrderNum": 7
+  }
+}, {
+  "method": "GET",
+  "name": "列表（员工端）",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["d187f527-47e7-4b51-a90b-595b21f5f38a"],
+    "page^": ["1"],
+    "size^": ["20"],
+    "newCust^": ["false"],
+    "keyword^": ["昌乐县"]
+  },
+  "resource": "客户",
+  "url": "/custInfos",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 2,
+    "total": 2,
+    "pages": 1,
+    "list": [{
+      "custId": "CUST01259",
+      "custName": "昌乐县盛源农资服务中心",
+      "phone": "13963637111",
+      "reviewStatus": "HAS_AUDIT",
+      "brandNames": []
+    }, {
+      "custId": "CUST000045",
+      "custName": "昌乐县鸿源农资销售中心",
+      "phone": "13705364220",
+      "reviewStatus": "HAS_AUDIT",
+      "brandNames": ["桂湖"]
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "详情（员工端）",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["d187f527-47e7-4b51-a90b-595b21f5f38a"]
+  },
+  "resource": "客户",
+  "url": "/custInfos/{custId}",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {
+    "custId": "CUST00161"
+  },
+  "results": {
+    "base": {
+      "custId": "CUST00161",
+      "custName": "漳州市雪娟化肥有限公司",
+      "phone": "13906969213",
+      "reviewStatus": "HAS_AUDIT",
+      "detailedAddress": "四川省成都市崇州市",
+      "area": "四川省成都市崇州市",
+      "region": "复肥事业部本部平原西区域"
+    },
+    "identification": {
+      "indentifyId": "IDEN00161",
+      "customerService": "50",
+      "customerType": "经销商",
+      "salesOrg": "1000",
+      "salesCompany": "成都云图控股股份有限公司"
+    },
+    "brandAreas": [{
+      "address": "新疆维吾尔自治区伊犁哈萨克自治州伊宁市",
+      "brandNames": ["嘉施利", "五禾丰"]
+    }, {
+      "address": "云南省红河哈尼族彝族自治州泸西县",
+      "brandNames": ["凯利丰"]
+    }, {
+      "address": "四川省眉山市东坡区修文镇",
+      "brandNames": ["撒威"]
+    }],
+    "invoice": {
+      "invoiceId": "INVO00161",
+      "isInvoice": "开专票",
+      "invoiceCompany": "漳州市需娟化肥有限公司",
+      "invoiceType": "公司",
+      "taxpayerIdentificationNum": "91350602MA2XN44W4R",
+      "invoiceCompanyAddress": "福建省漳州市芗城区元光南路鑫豪园2710室",
+      "invoiceConpanyPhone": "028-88888888",
+      "bank": "314399081322",
+      "account": "9080215090010000262209"
+    }
+  }
+}, {
+  "method": "GET",
+  "name": "客户资金（员工端）",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["d187f527-47e7-4b51-a90b-595b21f5f38a"],
+    "keyword^": [""]
+  },
+  "resource": "客户",
+  "url": "/custInfos/custAccounts",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 3,
+    "total": 3,
+    "pages": 1,
+    "list": [{
+      "custId": "CUST000051",
+      "custName": "玛纳斯县农业技术推广中心植物医院北五岔一分院",
+      "accountAvailable": 300000.0,
+      "marginAvailable": 120000.0,
+      "rebateAvailable": 80000.0
+    }, {
+      "custId": "CUST000051",
+      "custName": "玛纳斯县农业技术推广中心植物医院北五岔一分院",
+      "accountAvailable": 300000.0,
+      "marginAvailable": 120000.0,
+      "rebateAvailable": 80000.0
+    }, {
+      "custId": "CUST000051",
+      "custName": "玛纳斯县农业技术推广中心植物医院北五岔一分院",
+      "accountAvailable": 300000.0,
+      "marginAvailable": 120000.0,
+      "rebateAvailable": 80000.0
+    }],
+    "page": 1
+  }
+}, {
+  "method": "GET",
+  "name": "列表",
+  "headers": {
+    "Accept": ["application/json;version=2.0"],
+    "user-agent": ["npk/2.0 (iPhone; iOS 8.1.2; Scale/2.00)"],
+    "sign": [""]
+  },
+  "params": {
+    "accessToken&": ["b02cd37284c3546f6506b836374999db"],
+    "status^": ["05"],
+    "newOrder^": ["false"],
+    "page^": ["1"],
+    "size^": ["20"]
+  },
+  "resource": "订单",
+  "url": "/ordOrders",
+  "desc": "",
+  "version": ["2.0"],
+  "uriVariables": {},
+  "results": {
+    "size": 2,
+    "total": 2,
+    "pages": 1,
+    "list": [{
+      "orderId": "ORD000FF9171203",
+      "actualAmout": 50634.65,
+      "qty": 21.41,
+      "status": "05",
+      "createTime": 1512267015000,
+      "custName": "青岛及时雨农资有限公司",
+      "sendQty": 0.0,
+      "materials": [{
+        "materialId": "000000000020101131",
+        "picUrl": "upload/brandLogo/5454.png"
+      }],
+      "materialNum": 1
+    }, {
+      "orderId": "ORD000FFA171203",
+      "actualAmout": 25045.35,
+      "qty": 10.59,
+      "status": "05",
+      "createTime": 1512267089000,
+      "custName": "青岛及时雨农资有限公司",
+      "sendQty": 0.0,
+      "materials": [{
+        "materialId": "000000000020101131",
+        "picUrl": "upload/brandLogo/5454.png"
+      }, {
+        "materialId": "000000000020101132",
+        "picUrl": "upload/brandLogo/5454.png"
+      }],
+      "materialNum": 2
+    }],
+    "page": 1
+  }
+}]

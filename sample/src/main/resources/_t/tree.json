@@ -1,0 +1,120 @@
+[{
+  "text": "APP用户",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "登录"
+  }, {
+    "leaf": true,
+    "text": "修改密码"
+  }]
+}, {
+  "text": "首页Banner",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "列表"
+  }]
+}, {
+  "text": "产品分类",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "列表"
+  }]
+}, {
+  "text": "产品",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "列表"
+  }, {
+    "leaf": true,
+    "text": "单个详情"
+  }, {
+    "leaf": true,
+    "text": "近期购买"
+  }, {
+    "leaf": true,
+    "text": "猜你喜欢"
+  }]
+}, {
+  "text": "客户",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "我的首页"
+  }, {
+    "leaf": true,
+    "text": "个人信息"
+  }, {
+    "leaf": true,
+    "text": "任务排名"
+  }, {
+    "leaf": true,
+    "text": "发票信息"
+  }, {
+    "leaf": true,
+    "text": "列表（员工端）"
+  }, {
+    "leaf": true,
+    "text": "详情（员工端）"
+  }, {
+    "leaf": true,
+    "text": "客户资金（员工端）"
+  }]
+}, {
+  "text": "客户账户",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "资金明细"
+  }, {
+    "leaf": true,
+    "text": "可用现金"
+  }, {
+    "leaf": true,
+    "text": "承兑"
+  }, {
+    "leaf": true,
+    "text": "使用历史记录"
+  }, {
+    "leaf": true,
+    "text": "授信"
+  }, {
+    "leaf": true,
+    "text": "授信子类列表"
+  }, {
+    "leaf": true,
+    "text": "授信详细"
+  }, {
+    "leaf": true,
+    "text": "其他资金"
+  }, {
+    "leaf": true,
+    "text": "返利"
+  }, {
+    "leaf": true,
+    "text": "返利明细"
+  }]
+}, {
+  "text": "订单",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "列表"
+  }, {
+    "leaf": true,
+    "text": "单个详情"
+  }, {
+    "leaf": true,
+    "text": "物流跟踪"
+  }]
+}, {
+  "text": "员工",
+  "expanded": true,
+  "children": [{
+    "leaf": true,
+    "text": "我的首页"
+  }]
+}]

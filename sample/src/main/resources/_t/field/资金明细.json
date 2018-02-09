@@ -1,0 +1,91 @@
+[{
+  "desc": "流水号",
+  "name": "flowNo",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "业务类型（01：复肥；02：盐；03：酒；04：联碱）",
+  "name": "serviceType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户编号",
+  "name": "custNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户名称",
+  "name": "custName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "资金类型（01：现金；02：保证金；03：定金；04：大承兑；05：小承兑；06：临时授信；07：垫底；08：理财；09：政策返利；10：其他返利）",
+  "name": "fundType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "入账时间",
+  "name": "inputDate",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "增加金额",
+  "name": "addAmt",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "减少金额",
+  "name": "plusAmt",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "账户余额",
+  "name": "balance",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "入账类型（01：资金上账；02：保证金上账；03：定金上账；04：授信录入；05：授信还款；06：政策返利上账；07：其他返利上账；08：订单扣减；09:客户退款；10:订单冲正；11:授信解锁余款入账；12：冲销；13：资金调整；14：调增订单临时授信；15：调减订单；16：手工退货订单；17：手工退货订单冲销；18：手工退货订单冲销临时授信；19：流水自动合并；20：资金价格批次调整；21：标准订单退货冲销）",
+  "name": "inputType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "关联表",
+  "name": "relateTable",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "入账编号",
+  "name": "inputNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单编号",
+  "name": "orderNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "实例ID",
+  "name": "instId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "价格批次",
+  "name": "priceBatch",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}]

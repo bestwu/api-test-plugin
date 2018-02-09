@@ -1,0 +1,89 @@
+spring.profiles.active: @profiles.active@
+mybatis.configuration.mapUnderscoreToCamelCase: true
+spring:
+  application:
+    name: @application.name@
+  mvc:
+    dispatchOptionsRequest: true
+  jackson:
+    serialization:
+      WRITE_ENUMS_USING_INDEX: true
+      WRITE_NULL_MAP_VALUES: false
+      FAIL_ON_EMPTY_BEANS: false
+    default-property-inclusion: NON_NULL
+  data:
+    mongodb:
+      database: @mongodb.database@
+      host: @mongodb.host@
+      port: @mongodb.port@
+      username: @mongodb.username@
+      password: @mongodb.password@
+  datasource:
+    sql-script-encoding: UTF-8
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: @datasource.url@
+    username: @datasource.username@
+    password: @datasource.password@
+  messages:
+    cache-seconds: 10
+server:
+  session:
+    timeout: 600
+  port: 8080
+  context-path: /npk
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,application/javascript,application/json
+pagehelper:
+  helperDialect: oracle
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+api:
+  sign:
+    client-secret: @api.sign.client-secret@
+    handler-type-prefix: com.cdwintech.npk.rest.controller
+logging:
+  level:
+    root: info
+    org.springframework: warn
+    org.apache: warn
+    org.hibernate: warn
+    org.mybatis: warn
+    com.netflix: warn
+    org.jboss: warn
+    com.sun: warn
+    javax.xml: warn
+    net.sf: warn
+    javax.activation: warn
+    org.mongodb: warn
+  files:
+    path: @logging.files.path@
+  spilt-marker:
+    request: info
+app:
+  file-host: @app.file-host@
+---
+spring:
+  profiles: alpha
+logging:
+  level:
+    root: debug
+  request:
+    include-request-body: true
+    include-response-body: true
+  spilt-marker:
+    request: debug
+api:
+  test:
+    dev: true
+  generators:
+    datasource:
+      url: @generator.datasource.url@
+      username: @generator.datasource.username@
+      password: @generator.datasource.password@
+  apidoc:
+    default-host: @generator.application.host@
+    handler-type-prefix: com.cdwintech.npk.rest.controller
+    version: 2.0
+    project-name: ${spring.application.name}

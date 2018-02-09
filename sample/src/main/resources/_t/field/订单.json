@@ -1,0 +1,781 @@
+[{
+  "desc": "是否新增订单，默认为：false",
+  "id": "newOrder",
+  "name": "newOrder",
+  "nullable": true,
+  "type": "Boolean",
+  "value": false
+}, {
+  "desc": "物流状态信息",
+  "id": "deliveryStatus",
+  "name": "deliveryStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物流信息",
+  "id": "deliveryInfos",
+  "name": "deliveryInfos",
+  "nullable": true,
+  "type": "List<DeliveryInfo>",
+  "value": null
+}, {
+  "desc": "支付使用的价格批次",
+  "id": "priceBatch",
+  "name": "priceBatch",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "发货时间，可能为null",
+  "id": "postTime",
+  "name": "postTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "商品信息",
+  "id": "materials",
+  "name": "materials",
+  "nullable": true,
+  "type": "List<OrdOrderMaterial>",
+  "value": null
+}, {
+  "desc": "商品数量",
+  "id": "materialNum",
+  "name": "materialNum",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "主键",
+  "name": "orderId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单CODE",
+  "name": "orderCode",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "SAP编号",
+  "name": "sapCode",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户ID",
+  "name": "custId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "收货人ID",
+  "name": "receive",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "仓库ID",
+  "name": "sendStore",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "发货工厂",
+  "id": "sendFactory",
+  "name": "sendFactory",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "运输方式",
+  "name": "transport",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "到站",
+  "name": "destination",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "专线",
+  "name": "transportLine",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "销售",
+  "name": "seller",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "销售公司",
+  "name": "saleCompany",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "发货备注",
+  "name": "sendRemark",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单备注",
+  "name": "orderRemark",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单支付方式",
+  "name": "payType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "返利支付金额",
+  "name": "rebate",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "支付金额",
+  "name": "payAmout",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "实际金额",
+  "name": "actualAmout",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扣减金额",
+  "name": "discountAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "总数",
+  "name": "qty",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "运费总额",
+  "name": "transportAmout",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "装卸费总额",
+  "name": "handlingCharges",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "政策支付金额",
+  "name": "policyAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "资金支付金额",
+  "name": "cash",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "订单状态(00:已支付；01：已提交；02：待发货；03：部分发货；04：已结算；05：已完成；06：已取消；07：已关闭；08：退货中；09：已删除)",
+  "name": "status",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单审核状态(HAS_RECORDED:已录入,WAIT_AUDIT:待审核,HAS_AUDIT:已审核,RETURNED:已退回)",
+  "name": "auditStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单类型(01:标准订单,02:退货订单,03:手工退货订单,04:特殊订单,05:调增订单,06:调减订单,11:寄售订单,12:寄售退回订单,13:寄售结算订单,14:结算退回订单)",
+  "name": "orderType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单创建人",
+  "name": "creator",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "创建时间",
+  "name": "createTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "支付时间",
+  "name": "payTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "完成时间",
+  "name": "finishTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "公共库ID",
+  "name": "libId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "关联订单ID",
+  "name": "linkOrderId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "实例ID",
+  "name": "instId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "业务类型",
+  "name": "serviceType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户名称(SAP用)",
+  "name": "custName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "收货人名称(SAP用)",
+  "name": "receiveName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "收货人电话(SAP用)",
+  "name": "receiverPhone",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "是否立即发货",
+  "name": "isSend",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "大区",
+  "name": "region",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "销售组织",
+  "name": "salesOrg",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "收货地址(SAP用)",
+  "name": "receiveAdd",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "小包费",
+  "name": "smallpackageFee",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "销售员NO",
+  "name": "textField1",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "大区中文",
+  "name": "textField2",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "是否为APP订单(0:否,1:是)",
+  "name": "textField3",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户SAPNO",
+  "name": "custSapNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "建议运费(汽运)",
+  "name": "automobileFreight",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "发货数量",
+  "name": "sendQty",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "岗位ID",
+  "name": "postId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "收货单位",
+  "name": "consignee",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "调账原因",
+  "name": "adjustReason",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "待调账金额",
+  "name": "adjustMoney",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "调账流水号",
+  "name": "adjustBatch",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "扩展字段04",
+  "name": "textField4",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "扩展字段05",
+  "name": "textField5",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "扩展字段06",
+  "name": "textField6",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扩展字段07",
+  "name": "textField7",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "主键",
+  "name": "id",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "订单ID",
+  "name": "orderId",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "OrdOrderMaterial_orderId"
+}, {
+  "desc": "物料ID",
+  "name": "materialId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "数量",
+  "name": "qty",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null,
+  "id": "OrdOrderMaterial_qty"
+}, {
+  "desc": "区域销售价(单价)",
+  "name": "price",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "批次",
+  "name": "batchId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "商品金额(单价*数量)",
+  "name": "materialAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扣减金额(折扣*数量)",
+  "name": "descontAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "实际金额(商品金额-折扣*数量)",
+  "name": "actualAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "政策",
+  "name": "policy",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "运费单价",
+  "name": "transportPrice",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "装卸费单价",
+  "name": "handlingPrice",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "物料名称",
+  "name": "materialName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料CRM名称",
+  "name": "crmName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "工厂",
+  "name": "factory",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品牌",
+  "name": "brand",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品系",
+  "name": "strain",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品类",
+  "name": "category",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "大类",
+  "name": "bigClass",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "配比",
+  "name": "mixtureRatio",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "规格",
+  "name": "spec",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "养分",
+  "name": "nutrient",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "包装类型",
+  "name": "packingType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "图片",
+  "name": "picUrl",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "区域价",
+  "name": "regionalSalePrice",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "成本价",
+  "name": "costAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "推广费",
+  "name": "promotionFeeRegional",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "销售费",
+  "name": "salesExpenseRegional",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "战略费",
+  "name": "strategicCostRegional",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "客户标吨",
+  "name": "custCoefficient",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "业务员标吨",
+  "name": "salesCoefficient",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "运费总价",
+  "name": "transportAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "装卸费总金额",
+  "name": "handlingCharges",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null,
+  "id": "OrdOrderMaterial_handlingCharges"
+}, {
+  "desc": "实际标吨",
+  "name": "actualCustCoefficient",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "实际业务员标吨",
+  "name": "actualSalesCoefficient",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "小包费(单)",
+  "name": "smallPackageFee",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "折扣(单)",
+  "name": "reduce",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "小包费(包*数量)",
+  "name": "smallPackageAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "已发货数量",
+  "name": "hasSend",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": "0"
+}, {
+  "desc": "结算量",
+  "name": "num1",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": "0"
+}, {
+  "desc": "可售库存",
+  "name": "num2",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": "0"
+}, {
+  "desc": "已开票金额(SAP)",
+  "name": "num3",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": "0"
+}, {
+  "desc": "SAP行号",
+  "name": "txt1",
+  "nullable": true,
+  "type": "String",
+  "value": ""
+}, {
+  "desc": "行记录最大吨数",
+  "name": "txt2",
+  "nullable": true,
+  "type": "String",
+  "value": ""
+}, {
+  "desc": "实际退货总吨数",
+  "name": "txt3",
+  "nullable": true,
+  "type": "String",
+  "value": ""
+}, {
+  "desc": "资金流水ID",
+  "name": "accountId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "资金类型",
+  "name": "childrenAccountType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "结算单价(单价+运+装+包-折)",
+  "name": "payPrice",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "结算总价(结算单价*数量)",
+  "name": "payAmount",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "翻包费",
+  "name": "changePackageFee",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "翻包销售部费用",
+  "name": "salesPackage",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扩展字段4",
+  "name": "num4",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扩展字段5",
+  "name": "num5",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扩展字段6",
+  "name": "num6",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "订单类型",
+  "name": "txt4",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "是否影响标吨",
+  "name": "txt5",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "影响表吨金额",
+  "name": "txt6",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户加价",
+  "name": "custRaisePrice",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "客户加价销售部费用",
+  "name": "custRaiseSales",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扩展字段7",
+  "name": "num7",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扩展字段8",
+  "name": "num8",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "扩展字段9",
+  "name": "num9",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "发货工厂ID",
+  "name": "sendFactory",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "OrdOrder_sendFactory"
+}]

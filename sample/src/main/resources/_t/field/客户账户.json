@@ -1,0 +1,533 @@
+[
+  {
+    "desc": "客户ID，不传表示当前客户",
+    "id": "custId",
+    "name": "custId",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },{
+    "desc": "几天后到期",
+    "id": "endDate",
+    "name": "endDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "订单ID",
+    "id": "orderId",
+    "name": "orderId",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "总金额",
+    "id": "amount",
+    "name": "amount",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "账户信息",
+    "id": "accountInfos",
+    "name": "accountInfos",
+    "nullable": true,
+    "type": "List<AccountInfo>",
+    "value": null
+  },
+  {
+    "desc": "操作（打款/锁定/使用）时间",
+    "id": "opTime",
+    "name": "opTime",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "状态： 0:未使用，1:已锁定，2:已使用",
+    "name": "status",
+    "nullable": true,
+    "type": "Integer",
+    "value": null
+  },
+  {
+    "desc": "金额",
+    "id": "amt",
+    "name": "amt",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "资金使用记录",
+    "id": "records",
+    "name": "records",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "账户ID",
+    "name": "accountId",
+    "nullable": false,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "客户ID",
+    "name": "custId",
+    "nullable": false,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "01：现金；02：承兑；03：授信；04：返利",
+    "name": "accountType",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "01：现金；02：保证金；03：定金；04：大承兑；05：小承兑；06：临时欠款；07：垫底；08：理财授信；09：政策返利；10：其他返利",
+    "name": "childrenAccountType",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "价格批次",
+    "name": "priceBatch",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "政策ID",
+    "name": "policyId",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "是否默认 Y：是；N：否。",
+    "name": "isDefault",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "账户状态",
+    "name": "accountStatus",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "账户余额",
+    "name": "accountBalance",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "已用金额",
+    "name": "amountSpent",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "可用金额",
+    "name": "availableBalance",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "锁定金额",
+    "name": "lockAmount",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "已还金额",
+    "name": "alreadyRepayment",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "待还金额",
+    "name": "needPayment",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "审批金额",
+    "name": "approvedAmount",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "开始日期",
+    "name": "beginDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "结束日期",
+    "name": "endDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "还款日期",
+    "name": "repayDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "冻结日期",
+    "name": "blockDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "导入日期",
+    "name": "inputDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "资金导入流水",
+    "name": "fundFlowNo",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "业务类型（01：复肥；02：盐；03：酒；04：联碱）",
+    "name": "serviceType",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "超期天数",
+    "name": "overdays",
+    "nullable": true,
+    "type": "Short",
+    "value": null
+  },
+  {
+    "desc": "追加字段1",
+    "name": "extField1",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "追加字段2",
+    "name": "extField2",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "追加字段3",
+    "name": "extField3",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "利息",
+    "name": "penalty",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "流水号",
+    "name": "creditFlowNo",
+    "nullable": false,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "客户编号",
+    "name": "custNo",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "客户名称",
+    "name": "custName",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "资金来源（06：临时授信；07：垫底；08：网信理财）",
+    "name": "fundType",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "授信额度",
+    "name": "creditLimit",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "授信开始日期",
+    "name": "beginDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null,
+    "id": "FundCreditFlow_beginDate"
+  },
+  {
+    "desc": "授信结束日期",
+    "name": "endDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null,
+    "id": "FundCreditFlow_endDate"
+  },
+  {
+    "desc": "约定还款日期",
+    "name": "repayDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null,
+    "id": "FundCreditFlow_repayDate"
+  },
+  {
+    "desc": "销售公司",
+    "name": "saleCompany",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "罚息率",
+    "name": "rate",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "投资编号",
+    "name": "investNo",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "理财产品编号",
+    "name": "financProNo",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "理财产品名称",
+    "name": "financProName",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "网信账户名称",
+    "name": "netAcctName",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "注册手机号",
+    "name": "mobile",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "邀请编号",
+    "name": "inviteNo",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "邀请人名称",
+    "name": "inviter",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "投资期(天)",
+    "name": "investDays",
+    "nullable": true,
+    "type": "Short",
+    "value": null
+  },
+  {
+    "desc": "年化利率",
+    "name": "yearRate",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "理财金额(元)",
+    "name": "financAmt",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "投资成功时间",
+    "name": "investSucDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "入账时间",
+    "name": "getDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "录入日期",
+    "name": "inputDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null,
+    "id": "FundCreditFlow_inputDate"
+  },
+  {
+    "desc": "上账日期",
+    "name": "upAcctDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null
+  },
+  {
+    "desc": "状态（HAS_RECORDED：已录入；WAIT_AUDIT：待审核；HAS_AUDIT：已审核；RETURNED：退回；DEAL_FAILED：交易失败）",
+    "name": "state",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "报错信息--暂存作操作人ID",
+    "name": "errMsg",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "备注",
+    "name": "remarks",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "实例ID",
+    "name": "instId",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "流水号",
+    "name": "flowNo",
+    "nullable": false,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "资金类型（01：现金；02：保证金；03：定金；04：大承兑；05：小承兑；06：临时授信；07：垫底；08：理财；09：政策返利；10：其他返利）",
+    "name": "fundType",
+    "nullable": true,
+    "type": "String",
+    "value": null,
+    "id": "fundType"
+  },
+  {
+    "desc": "入账时间",
+    "name": "inputDate",
+    "nullable": true,
+    "type": "Long",
+    "value": null,
+    "id": "FundTranDetailFlow_inputDate"
+  },
+  {
+    "desc": "增加金额",
+    "name": "addAmt",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "减少金额",
+    "name": "plusAmt",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "账户余额",
+    "name": "balance",
+    "nullable": true,
+    "type": "BigDecimal",
+    "value": null
+  },
+  {
+    "desc": "入账类型（01：资金上账；02：保证金上账；03：定金上账；04：授信录入；05：授信还款；06：政策返利上账；07：其他返利上账；08：订单扣减；09:客户退款；10:订单冲正；11:授信解锁余款入账；12：冲销；13：资金调整；14：调增订单临时授信；15：调减订单；16：手工退货订单；17：手工退货订单冲销；18：手工退货订单冲销临时授信；19：流水自动合并；20：资金价格批次调整；21：标准订单退货冲销）",
+    "name": "inputType",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "关联表",
+    "name": "relateTable",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "入账编号",
+    "name": "inputNo",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "订单编号",
+    "name": "orderNo",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  }
+]

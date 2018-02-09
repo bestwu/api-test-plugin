@@ -1,0 +1,568 @@
+[{
+  "desc": "基本信息",
+  "id": "base",
+  "name": "base",
+  "nullable": true,
+  "type": "CustInfoBase",
+  "value": false
+}, {
+  "desc": "大区",
+  "id": "region",
+  "name": "region",
+  "nullable": true,
+  "type": "String",
+  "value": false
+}, {
+  "desc": "身份信息",
+  "id": "identification",
+  "name": "identification",
+  "nullable": true,
+  "type": "CustIdentification",
+  "value": false
+}, {
+  "desc": "品牌代理区域",
+  "id": "brandAreas",
+  "name": "brandAreas",
+  "nullable": true,
+  "type": "List<BrandArea>",
+  "value": false
+}, {
+  "desc": "地址",
+  "id": "address",
+  "name": "address",
+  "nullable": true,
+  "type": "String",
+  "value": false
+}, {
+  "desc": "开票信息",
+  "id": "invoice",
+  "name": "invoice",
+  "nullable": true,
+  "type": "CustInvoice",
+  "value": false
+}, {
+  "desc": "任务排名类型，0：实物吨，1：标准吨",
+  "id": "taskListType",
+  "name": "taskListType",
+  "nullable": false,
+  "type": "Integer",
+  "store": [0, 1],
+  "value": null
+}, {
+  "desc": "是否新增客户，默认为：false",
+  "id": "newCust",
+  "name": "newCust",
+  "nullable": true,
+  "type": "Boolean",
+  "value": false
+}, {
+  "desc": "代理的品牌",
+  "id": "brandNames",
+  "name": "brandNames",
+  "nullable": true,
+  "type": "List<String>",
+  "value": null
+}, {
+  "desc": "月度排名统计",
+  "id": "month",
+  "name": "month",
+  "nullable": true,
+  "type": "CustSum",
+  "value": null
+}, {
+  "desc": "季度排名统计",
+  "id": "quarter",
+  "name": "quarter",
+  "nullable": true,
+  "type": "CustSum",
+  "value": null
+}, {
+  "desc": "年排名统计",
+  "id": "year",
+  "name": "year",
+  "nullable": true,
+  "type": "CustSum",
+  "value": null
+}, {
+  "desc": "年出货目标",
+  "id": "yearTargetCoefficient",
+  "name": "yearTargetCoefficient",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "出货数量",
+  "id": "coefficient",
+  "name": "coefficient",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "达成目录数量",
+  "id": "reachs",
+  "name": "reachs",
+  "nullable": true,
+  "type": "List<AreaNum>",
+  "value": null
+}, {
+  "desc": "出货量",
+  "id": "shipments",
+  "name": "shipments",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "分区排名",
+  "id": "areas",
+  "name": "areas",
+  "nullable": true,
+  "type": "List<AreaNum>",
+  "value": null
+}, {
+  "desc": "数量/排名",
+  "id": "num",
+  "name": "num",
+  "nullable": true,
+  "type": "Integer",
+  "value": null
+}, {
+  "desc": "地区",
+  "id": "area",
+  "name": "area",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "发货工厂",
+  "id": "deliveryPlant",
+  "name": "deliveryPlant",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "销售信息",
+  "id": "saleInfo",
+  "name": "saleInfo",
+  "nullable": true,
+  "type": "Map<String,String>",
+  "value": null
+}, {
+  "desc": "客户头像",
+  "id": "custAvator",
+  "name": "custAvator",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "账户可用总余额",
+  "id": "accountAvailable",
+  "name": "accountAvailable",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "保证金/定金",
+  "id": "marginAvailable",
+  "name": "marginAvailable",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "可用返利",
+  "id": "rebateAvailable",
+  "name": "rebateAvailable",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+}, {
+  "desc": "是否有待发货订单",
+  "id": "hasDeliveryOrder",
+  "name": "hasDeliveryOrder",
+  "nullable": true,
+  "type": "Boolean",
+  "value": null
+}, {
+  "desc": "本月是否对账",
+  "id": "needCheckAccount",
+  "name": "needCheckAccount",
+  "nullable": true,
+  "type": "Boolean",
+  "value": null
+}, {
+  "desc": "客户ID(客户编号)",
+  "name": "custId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户名称",
+  "name": "custName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "法人名称",
+  "name": "legalPersonName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "法人身份证号码",
+  "name": "legalPersonCertno",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "营业执照号码",
+  "name": "businessLicenceNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "手机",
+  "name": "phone",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "传真",
+  "name": "fax",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "电话",
+  "name": "mobile",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "云图生活ID",
+  "name": "yuntuId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "联系省",
+  "name": "contactProvince",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "联系市",
+  "name": "contactCity",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "联系区",
+  "name": "contactDistrict",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "联系乡镇",
+  "name": "contactTown",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "详细地址",
+  "name": "detailedAddress",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户级别",
+  "name": "customerRank",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "上级客户ID,此字段没有使用,PARENT_CUST_NAME存的就是id值",
+  "name": "parentCustId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "上级客户名称",
+  "name": "parentCustName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "审核状态：录入(HAS_RECORDED)，待审核(WAIT_AUDIT)，已审核(HAS_AUDIT)",
+  "id": "reviewStatus",
+  "name": "reviewStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户状态：新增ADD_NEW，正常:NORMAL，失效:EFFECT",
+  "name": "custStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "实例ID",
+  "name": "instId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "创建时间",
+  "name": "createTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "SAP Number",
+  "name": "sapNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "删除时间",
+  "name": "deleteTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "此字段用于区别各个不同的审核状态;01:客户信息新增;02:客户信息修改;03:身份信息新增;04:身份信息修改;05:开票信息新增;06:开票信息修改",
+  "name": "businessAttach",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "冗余字段,记录联系地址的拼接",
+  "name": "addressPath",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "供应商ID",
+  "name": "supplierId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户修改审核状态",
+  "name": "textFiled1",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "备用字段2",
+  "name": "textFiled2",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "备用字段3",
+  "name": "textFiled3",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "身份表ID",
+  "name": "indentifyId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户级别",
+  "name": "customerLevel",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "业务类型 50:复肥",
+  "name": "customerService",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户类型",
+  "name": "customerType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "状态",
+  "name": "indentiyStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "客户ID",
+  "name": "custId",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "CustIdentification_custId"
+}, {
+  "desc": "仓库ID",
+  "name": "warehouseId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "销售组织",
+  "name": "salesOrg",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "销售公司",
+  "name": "salesCompany",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "审核状态",
+  "name": "reviewStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "CustIdentification_reviewStatus"
+}, {
+  "desc": "创建时间",
+  "name": "idTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "备用字段1",
+  "name": "textStandby1",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "开票信息ID",
+  "name": "invoiceId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "是否开票",
+  "name": "isInvoice",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "开票抬头",
+  "name": "invoiceCompany",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "开票类型",
+  "name": "invoiceType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "纳税人身份识别码",
+  "name": "taxpayerIdentificationNum",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "公司地址",
+  "name": "invoiceCompanyAddress",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "开票公司电话",
+  "name": "invoiceConpanyPhone",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "开户行",
+  "name": "bank",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "银行账号",
+  "name": "account",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "新增ADD_NEW,正常NORMAL,失效EFFECT",
+  "name": "invoiceStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "已录入HAS_RECORDED,待审核WAIT_AUDIT,已修改 HAS_EDIT,已审核HAS_AUDIT,退回RETURNED,已删除HAS_DELETE",
+  "name": "reviewStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "CustInvoice_reviewStatus"
+}, {
+  "desc": "创建时间",
+  "name": "inTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "审核状态：录入，待审核，已审核",
+  "name": "reviewStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "CustInfo_reviewStatus"
+}, {
+  "desc": "品牌代理区域ID",
+  "name": "brandAreaId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "省",
+  "name": "brandAreaProvince",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "市",
+  "name": "brandAreaCity",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "区/县",
+  "name": "brandAreaDistrict",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "乡/镇",
+  "name": "brandTwon",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品牌名称",
+  "name": "brandName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "创建时间",
+  "name": "brTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "备用字段1",
+  "name": "textBr1",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}]

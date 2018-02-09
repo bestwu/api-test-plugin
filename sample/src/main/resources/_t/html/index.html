@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="renderer" content="webkit"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>接口文档</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px;
+      overflow: auto;
+      color: #444;
+      font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.5em
+    }
+
+    a {
+      outline: none;
+      color: #0645ad;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #0645ad;
+    }
+
+    a:hover {
+      color: #06e;
+    }
+
+    a:active {
+      color: #faa700;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: normal;
+      color: #111;
+      line-height: 1em;
+    }
+
+    h4, h5, h6 {
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+      border-bottom: 1px solid silver;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+
+    h6 {
+      font-size: 0.9em;
+    }
+
+    blockquote {
+      color: #666666;
+      margin: 0;
+      padding-left: 3em;
+      border-left: 0.5em #EEE solid;
+    }
+
+    hr {
+      display: block;
+      height: 2px;
+      border: 0;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #eee;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    pre, code {
+      color: #000;
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 0.94em; /* 0.94 = 0.88 + (1.00 - 0.88) / 2 */
+      border-radius: 3px;
+      background-color: #F8F8F8;
+      border: 1px solid #CCC;
+    }
+
+    pre {
+      white-space: pre;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      padding: 5px;
+    }
+
+    pre code {
+      border: 0px !important;
+      background: transparent !important;
+      line-height: 1.3em;
+    }
+
+    code {
+      padding: 0 3px 0 3px;
+    }
+
+    sub, sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    ul, ol {
+      margin: 1em 0;
+      padding: 0 0 0 2em;
+    }
+
+    li p:last-child {
+      margin: 0
+    }
+
+    dd {
+      margin: 0 0 0 2em;
+    }
+
+    img {
+      border: 0;
+      -ms-interpolation-mode: bicubic;
+      vertical-align: middle;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td, th {
+      vertical-align: top;
+      padding: 4px 10px;
+      border: 1px solid #bbb;
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    tr:nth-child(even) td, tr:nth-child(even) th {
+      background: #efefef;
+    }
+
+    tr:nth-child(odd) td:hover, tr:nth-child(odd) th:hover {
+      background: #efefef;
+    }
+
+    tr:nth-child(even) td:hover, tr:nth-child(even) th:hover {
+      background: white;
+    }
+
+    table th {
+      white-space: nowrap;
+    }
+
+    .collapsed .arrow {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      background-repeat: no-repeat;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAQAAABedl5ZAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH4gETBRUpm1h9ewAAABBjYU52AAAB1QAAAJ8AAAHIAAAASAXkU10AAACCSURBVBjTY2CgEEjOlzwvyY9VQvO/3n+ZCwhJJhhDiZ+LgZVBSJ/5IEwSLnWkSmoHA5okHPzX8N1u/N8YzVi4pNVziKTcQiQDGRgYGKTKv0kwMDAwCNxZOgXDjcb/jf/b3T7n8J8FrwRcVon/BwMDA/edCamGRxj/YLgPwyiEJKoEAD8oOC9sjnUSAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTE4VDIxOjIxOjQxKzA4OjAwjLJP7QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0xOFQyMToyMTo0MSswODowMP3v91EAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC');
+    }
+
+    .collapsed + ul {
+      display: none;
+    }
+
+    .expanded + ul {
+      display: flow;
+    }
+
+    .expanded .arrow {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      background-repeat: no-repeat;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH4gETBRUpm1h9ewAAABBjYU52AAAB1QAAAJ8AAAE5AAAAd8bWB40AAAB0SURBVBjTxc2hDYAwFATQC6kgGJD8DagjqUGRLsAOMFnHYAsWqEAyxiGglIRWc+7+S+4DP0WcuEwTp6kZDu+mpG6HAgBm4FjENXMFoBwOAKDa7OgNDTVl1zQ0HP1m79nI/UNUz9fIH3pzggJPa5IuZpehVE7yZEJPmBmauAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wMS0xOFQyMToyMTo0MSswODowMIyyT+0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDEtMThUMjE6MjE6NDErMDg6MDD97/dRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg==');
+    }
+
+    .topAnchor {
+      display: block;
+      position: fixed;
+      z-index: 1001;
+      bottom: 10px;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      background-color: #c9c9c9;
+    }
+
+    .topAnchor a {
+      display: block;
+      padding: 12px;
+      background: rgba(255, 255, 255, .5);
+    }
+
+    .topAnchor a span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfeAhkNNgFF8q46AAAAd0lEQVQ4y+2RoQ2AMBAADwGisjBPh2CLahzrgMEwAmuVYIogBFIa+iHB9eT/3ZuHzA8U0WlFC8xssiMlPQ5HTynVVzxelpz6xIRnTSWnPqDRjKnk0msAmvck1BNJQffQ70kXPkCxRPQrWVDhwmAj+pFYjOQjmc/sNUsv1+vGNvUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMDktMTdUMTU6MTk6NDErMDg6MDD2piBqAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE0LTAyLTI1VDEzOjU0OjAxKzA4OjAwtu6diAAAAE10RVh0c29mdHdhcmUASW1hZ2VNYWdpY2sgNy4wLjEtNiBRMTYgeDg2XzY0IDIwMTYtMDktMTcgaHR0cDovL3d3dy5pbWFnZW1hZ2ljay5vcmfd2aVOAAAAGHRFWHRUaHVtYjo6RG9jdW1lbnQ6OlBhZ2VzADGn/7svAAAAGHRFWHRUaHVtYjo6SW1hZ2U6OkhlaWdodAAxMjhDfEGAAAAAF3RFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADEyONCNEd0AAAAZdEVYdFRodW1iOjpNaW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTM5MzMwNzY0MWqa+K0AAAASdEVYdFRodW1iOjpTaXplADEuNjlLQvWCP7QAAABfdEVYdFRodW1iOjpVUkkAZmlsZTovLy9ob21lL3d3d3Jvb3Qvc2l0ZS93d3cuZWFzeWljb24ubmV0L2Nkbi1pbWcuZWFzeWljb24uY24vc3JjLzExMzc3LzExMzc3NDgucG5nniX3RQAAAABJRU5ErkJggg==");
+    }
+
+    @media (min-width: 800px) {
+      body {
+        padding-left: 0;
+        padding-top: 0;
+      }
+
+      .catalog {
+        position: fixed;
+        width: 24%;
+        height: 100%;
+
+        overflow: auto;
+        border-right: 1px solid #e5e5e5;
+        border-bottom: 0;
+        background-color: #ededed;
+      }
+
+      .content {
+        position: absolute;
+        left: 24%;
+        width: 74%;
+        height: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="catalog">
+  <h3>&nbsp;&nbsp;<a href="index.html">复合肥CRM APP2.0</a></h3>
+<ul>
+  <li>
+  <p><a href="index.html">系统介绍</a></p></li>
+  <li>
+  <p><a href="业务相关错误码.html">业务相关错误码</a></p></li>
+  <li><a href="接口授权说明.html">接口授权说明</a></li>
+  <li><a href="签名算法.html">签名算法</a></li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>1 APP用户</a>
+    <ul>
+      <li><a href="01-APP用户.html#1-1-登录">1.1 登录</a></li>
+      <li><a href="01-APP用户.html#1-2-修改密码">1.2 修改密码</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>2 首页Banner</a>
+    <ul>
+      <li><a href="02-首页Banner.html#2-1-列表">2.1 列表</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>3 产品分类</a>
+    <ul>
+      <li><a href="03-产品分类.html#3-1-列表">3.1 列表</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>4 产品</a>
+    <ul>
+      <li><a href="04-产品.html#4-1-列表">4.1 列表</a></li>
+      <li><a href="04-产品.html#4-2-单个详情">4.2 单个详情</a></li>
+      <li><a href="04-产品.html#4-3-近期购买">4.3 近期购买</a></li>
+      <li><a href="04-产品.html#4-4-猜你喜欢">4.4 猜你喜欢</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>5 客户</a>
+    <ul>
+      <li><a href="05-客户.html#5-1-我的首页">5.1 我的首页</a></li>
+      <li><a href="05-客户.html#5-2-个人信息">5.2 个人信息</a></li>
+      <li><a href="05-客户.html#5-3-任务排名">5.3 任务排名</a></li>
+      <li><a href="05-客户.html#5-4-发票信息">5.4 发票信息</a></li>
+      <li><a href="05-客户.html#5-5-列表-员工端-">5.5 列表（员工端）</a></li>
+      <li><a href="05-客户.html#5-6-详情-员工端-">5.6 详情（员工端）</a></li>
+      <li><a href="05-客户.html#5-7-客户资金-员工端-">5.7 客户资金（员工端）</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>6 客户账户</a>
+    <ul>
+      <li><a href="06-客户账户.html#6-1-资金明细">6.1 资金明细</a></li>
+      <li><a href="06-客户账户.html#6-2-可用现金">6.2 可用现金</a></li>
+      <li><a href="06-客户账户.html#6-3-承兑">6.3 承兑</a></li>
+      <li><a href="06-客户账户.html#6-4-使用历史记录">6.4 使用历史记录</a></li>
+      <li><a href="06-客户账户.html#6-5-授信">6.5 授信</a></li>
+      <li><a href="06-客户账户.html#6-6-授信子类列表">6.6 授信子类列表</a></li>
+      <li><a href="06-客户账户.html#6-7-授信详细">6.7 授信详细</a></li>
+      <li><a href="06-客户账户.html#6-8-其他资金">6.8 其他资金</a></li>
+      <li><a href="06-客户账户.html#6-9-返利">6.9 返利</a></li>
+      <li><a href="06-客户账户.html#6-10-返利明细">6.10 返利明细</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>7 订单</a>
+    <ul>
+      <li><a href="07-订单.html#7-1-列表">7.1 列表</a></li>
+      <li><a href="07-订单.html#7-2-单个详情">7.2 单个详情</a></li>
+      <li><a href="07-订单.html#7-3-物流跟踪">7.3 物流跟踪</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li>
+    <a class="expanded" onclick="onTitleClick(this);" href="javascript:void(0);"><i class="arrow"></i>8 员工</a>
+    <ul>
+      <li><a href="08-员工.html#8-1-我的首页">8.1 我的首页</a></li>
+    </ul>
+  </li>
+</ul>
+<hr/>
+</div>
+<div class="content">
+  <h4><a href="#0系统概述" name="0系统概述">系统概述</a></h4>
+<p>系统接口采用REST规范，所有的接口以资源方式提供客户端访问。</p>
+<p><a href="签名算法.html">接口签名算法</a></p>
+<p>RESTful Web 服务：</p>
+<table>
+  <thead>
+    <tr>
+      <th title="请求方法 ">请求方法 </th>
+      <th title="URI ">URI </th>
+      <th title="说明 ">说明 </th>
+      <th title="响应的HTTP状态码">响应的HTTP状态码</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td title="GET ">GET </td>
+      <td title="/{model} ">/{model} </td>
+      <td title="资源列表 ">资源列表 </td>
+      <td title="200">200</td>
+    </tr>
+    <tr>
+      <td title="GET ">GET </td>
+      <td title="/{model}/{id} ">/{model}/{id} </td>
+      <td title="id对应的资源 ">id对应的资源 </td>
+      <td title="200">200</td>
+    </tr>
+    <tr>
+      <td title="POST ">POST </td>
+      <td title="/{model} ">/{model} </td>
+      <td title="新建资源 ">新建资源 </td>
+      <td title="201">201</td>
+    </tr>
+    <tr>
+      <td title="PUT ">PUT </td>
+      <td title="/{model}/{id} ">/{model}/{id} </td>
+      <td title="更新资源 ">更新资源 </td>
+      <td title="200">200</td>
+    </tr>
+    <tr>
+      <td title="DELETE ">DELETE </td>
+      <td title="/{model}/{id} ">/{model}/{id} </td>
+      <td title="删除资源 ">删除资源 </td>
+      <td title="204">204</td>
+    </tr>
+    <tr>
+      <td title="DELETE ">DELETE </td>
+      <td title="/{model} ">/{model} </td>
+      <td title="批量删除资源 ">批量删除资源 </td>
+      <td title="204">204</td>
+    </tr>
+  </tbody>
+</table>
+<p>由于restful的特点，服务端不保存用户的状态，所以每次用户访问都须传输自身信息。</p>
+<h4><a href="#1客户端请求说明" name="1客户端请求说明">客户端请求说明</a></h4>
+<p>客户端与服务器的通讯通过HTTP内容协商。所以，HTTP请求头应遵守以下规范：</p>
+<ul>
+  <li>Accept的格式为:application/json;version=version</li>
+</ul>
+<blockquote>
+  <p>version参数表示要请求的接口的版本。如果不传,服务器将按最低版本响应，强烈建议每次都传入确定的版本信息。</p>
+  <p>服务器接受的有效的Accept格式,(*/* 、 application/* 、 application/json), 例子： */*;version=1.0、application/*;version=1.0、application/json;version=1.0<br/>错误的Accept服务器将响应406 HTTP Status Code</p>
+</blockquote>
+<ul>
+  <li>User-Agent的格式建议统一为: npk/version (deviceInfo)</li>
+</ul>
+<blockquote>
+  <p>npk 为项目代号，固定不变</p>
+  <p>version 为客户端版本号</p>
+  <p>deviceInfo 为平台信息</p>
+  <p>有效User-Agent,如：npk/1.0 (iPhone; iOS 8.1.2; Scale/2.00)、npk/1.0 (Android-4.4.4;Model:MI 4LTE)</p>
+</blockquote>
+<h4><a href="#2响应说明" name="2响应说明">响应说明</a></h4>
+<p>响应结果状态通过HTTP状态码表达。返回的时间，默认格式为毫秒数(从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数)</p>
+<h5><a href="#3响应内容" name="3响应内容">响应内容</a></h5>
+<p>请求出错时的响应结果，即HTTP状态码&gt;=400时,例子：</p>
+<pre><code class="json">{
+  &quot;status&quot;: 422,
+  &quot;message&quot;: &quot;Validation Failed&quot;,
+  &quot;errors&quot;: {
+    &quot;first_name&quot;: &quot;First name cannot have fancy characters&quot;,
+    &quot;password&quot;: &quot;Password cannot be blank&quot;
+  }
+}
+</code></pre>
+<ul>
+  <li>status：错误码。当不是业务相关错误时，值与HTTP状态码保持一致，否则为<a href="业务相关错误码.html">业务相关错误码</a></li>
+  <li>message：错误信息</li>
+  <li>errors：详细错误信息，errors 内key为错误的字段/错误信息名称，value为错误信息</li>
+</ul>
+<p>请求成功时的响应结果，HTTP状态码&gt;=200,&lt;300时：</p>
+<h6><a href="#4单个资源" name="4单个资源">单个资源</a></h6>
+<p>例子：</p>
+<pre><code class="json">{
+  &quot;create_time&quot;: 1442309074,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;modify_time&quot;: 1442309074,
+  &quot;username&quot;: &quot;peter&quot;
+}
+</code></pre>
+<h6><a href="#5列表资源" name="5列表资源">列表资源</a></h6>
+<p>请求参数支持：page、size、sort</p>
+<ul>
+  <li>page: 页码索引，从1开始，默认1</li>
+  <li>size: 每页数量，默认20</li>
+</ul>
+<p>例子：</p>
+<pre><code class="json">{
+      &quot;size&quot;: 13,
+      &quot;total&quot;: 13,
+      &quot;pages&quot;: 1,
+      &quot;list&quot;: {
+        &quot;id&quot;: 3,
+        &quot;goodsNo&quot;: &quot;718000872243&quot;,
+        &quot;consigneeName&quot;: &quot;\u8d75\u56fd\u67f1&quot;,
+        &quot;consigneeTel&quot;: &quot;18224060100&quot;,
+        &quot;consigneeAddress&quot;: &quot;\u4e3d\u666f\u56ed3\u671f&quot;,
+        &quot;status&quot;: 2,
+        &quot;finished&quot;: false
+      },
+      &quot;page&quot;: 1
+}
+</code></pre>
+<ul>
+  <li>list: 资源列表</li>
+  <li>page: 页码，从1开始</li>
+  <li>size: 每页数量</li>
+  <li>total: 总数量</li>
+  <li>pages: 总页数</li>
+</ul>
+<h5><a href="#6出错处理" name="6出错处理">出错处理</a></h5>
+<p>当客户端收到的 HTTP 状态码大于等于400时，客户端应按以下方式处理。</p>
+<ul>
+  <li>
+  <p>当 HTTP 状态码为400时,表示业务异常，根据响应体中的 status 字段值按<a href="业务相关错误码.html">业务相关错误码约定</a>处理。</p></li>
+  <li>
+  <p>当 HTTP 状态码为401时,跳转到登录界面，让用户登录,可提示用户您还未登录。</p></li>
+  <li>
+  <p>当 HTTP 状态码为其他时，取 message 字段内容提示用户即可。</p></li>
+</ul>
+<h5><a href="#7http状态码说明" name="7http状态码说明">http状态码说明</a></h5>
+<table>
+  <thead>
+    <tr>
+      <th title="HTTP状态码 ">HTTP状态码 </th>
+      <th title="说明">说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td title="200 ">200 </td>
+      <td title="请求成功">请求成功</td>
+    </tr>
+    <tr>
+      <td title="201 ">201 </td>
+      <td title="资源成功创建">资源成功创建</td>
+    </tr>
+    <tr>
+      <td title="204 ">204 </td>
+      <td title="请求成功，返回空内容">请求成功，返回空内容</td>
+    </tr>
+    <tr>
+      <td title="400 ">400 </td>
+      <td title="错误的请求">错误的请求</td>
+    </tr>
+    <tr>
+      <td title="401 ">401 </td>
+      <td title="未授权">未授权</td>
+    </tr>
+    <tr>
+      <td title="403 ">403 </td>
+      <td title="无权访问">无权访问</td>
+    </tr>
+    <tr>
+      <td title="404 ">404 </td>
+      <td title="未找到资源">未找到资源</td>
+    </tr>
+    <tr>
+      <td title="405 ">405 </td>
+      <td title="不支持的请求方法">不支持的请求方法</td>
+    </tr>
+    <tr>
+      <td title="406 ">406 </td>
+      <td title="不接受的客户端请求">不接受的客户端请求</td>
+    </tr>
+    <tr>
+      <td title="422 ">422 </td>
+      <td title="请求数据验证失败，参数不正确">请求数据验证失败，参数不正确</td>
+    </tr>
+    <tr>
+      <td title="500 ">500 </td>
+      <td title="服务器通用错误码">服务器通用错误码</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="topAnchor">
+  <a id="topAnchor" href="#">
+    <span></span>
+  </a>
+</div>
+</body>
+<script type="text/javascript">
+  function changeMargin() {
+    var docWidth = document.body.clientWidth;
+    if (docWidth < 800) {
+      document.getElementById("topAnchor").setAttribute("href", "index.html#")
+    }
+  }
+
+  changeMargin();
+  window.onresize = changeMargin;
+
+  function onTitleClick(e) {
+    if (e.className === "expanded") {
+      e.className = "collapsed";
+    } else {
+      e.className = "expanded";
+    }
+  }
+</script>

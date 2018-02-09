@@ -1,0 +1,145 @@
+[
+  {
+    "desc": "密码（MD5（明文密码+手机号））",
+    "id": "password",
+    "name": "password",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "原密码（MD5（明文密码+手机号））",
+    "id": "oldPassword",
+    "name": "oldPassword",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "新密码（Base64（明文密码+手机号））",
+    "id": "newPassword",
+    "name": "newPassword",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "",
+    "name": "userId",
+    "nullable": false,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户工号",
+    "name": "agentNumber",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户昵称",
+    "name": "nickName",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户登录名",
+    "name": "loginName",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户姓名",
+    "name": "name",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "密码",
+    "name": "password",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户性别. M:男 F:女; O:其它",
+    "name": "gender",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户电话",
+    "name": "mobile",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户其它电话",
+    "name": "otherPhone",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户邮箱地址",
+    "name": "email",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "是否为系统用户. Y:系统默认用户; N:非系统默认用户",
+    "name": "isSys",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "用户状态。 ENABLE:启用; DISABLE:停用; REMOVE:删除标记",
+    "name": "userState",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "创建时间",
+    "name": "createTime",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "创建人",
+    "name": "creator",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "最后更新人",
+    "name": "lastUpdater",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "最后更新时间",
+    "name": "lastUpdateTime",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "标识用户来源通道: 例: USER:用户模块创建; EMP:员工模块; CUST:客户模块 等",
+    "name": "sourceChannel",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  }
+]

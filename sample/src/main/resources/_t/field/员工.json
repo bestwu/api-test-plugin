@@ -1,0 +1,151 @@
+[{
+  "desc": "新增订单数",
+  "name": "newOrderNum",
+  "nullable": false,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "新增客户数",
+  "name": "newCustNum",
+  "nullable": false,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "客户数",
+  "name": "custNum",
+  "nullable": false,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "员工ID",
+  "name": "empId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "部门",
+  "name": "deptName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "岗位名称",
+  "name": "postName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "工号",
+  "name": "empNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "姓名",
+  "name": "empName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "身份证号",
+  "name": "idNumber",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "身份ID",
+  "name": "identityId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "身份证地址",
+  "name": "idAddress",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "用户性别. M:男 F:女; O:其它",
+  "name": "gender",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "民族",
+  "name": "nation",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "籍贯",
+  "name": "nativePlace",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "健康状况  0 不健康 1健康",
+  "name": "health",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "婚姻状况 0 未婚 1已婚",
+  "name": "marriage",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "个人手机号",
+  "name": "mobile",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "其它电话",
+  "name": "otherPhone",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "短号",
+  "name": "cornet",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "座机外线",
+  "name": "outsideLine",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "电子信箱",
+  "name": "email",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "人员状态 JOB :在职 ; QUIT:离职",
+  "name": "personnelStatus",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "用户ID",
+  "name": "userid",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "最后更新者",
+  "name": "lastUpdater",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "最后更新时间",
+  "name": "lastUpdateTime",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}]

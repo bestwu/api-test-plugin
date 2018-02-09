@@ -1,0 +1,73 @@
+[
+  {
+    "desc": "图片链接地址",
+    "id": "img",
+    "name": "img",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },
+  {
+    "desc": "接口签名 <a href='html/签名算法.html' target='_blank'>签名算法</a>",
+    "id": "sign",
+    "name": "sign",
+    "nullable": false,
+    "type": "String",
+    "value": ""
+  },
+  {
+    "desc": "授权码",
+    "id": "accessToken",
+    "name": "accessToken",
+    "nullable": false,
+    "type": "String",
+    "value": ""
+  },
+  {
+    "desc": "关键字",
+    "name": "keyword",
+    "type": "string",
+    "value": ""
+  },
+  {
+    "desc": "内容",
+    "name": "list",
+    "type": "Array",
+    "value": ""
+  },
+  {
+    "desc": "页码，从1开始，默认1",
+    "id": "page",
+    "name": "page",
+    "type": "Integer",
+    "value": "1"
+  },
+  {
+    "desc": "当前页的数量",
+    "id": "pageSize",
+    "name": "size",
+    "type": "Integer",
+    "value": ""
+  },
+  {
+    "desc": "总页数",
+    "id": "pages",
+    "name": "pages",
+    "type": "Long",
+    "value": ""
+  },
+  {
+    "desc": "每页最大数量，默认20",
+    "id": "size",
+    "name": "size",
+    "type": "Integer",
+    "value": "20"
+  },
+  {
+    "desc": "总记录数",
+    "id": "total",
+    "name": "total",
+    "type": "Long",
+    "value": ""
+  }
+]

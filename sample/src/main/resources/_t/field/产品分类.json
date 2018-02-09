@@ -1,0 +1,43 @@
+[{
+  "desc": "主键",
+  "name": "id",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "名称",
+  "name": "levelName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "",
+  "name": "levelCode",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "级别(1:品牌,2:品系,3:品类,4:大类)",
+  "name": "levels",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "父级ID",
+  "name": "parentId",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "分类编码(其中大类为大类编码)",
+  "name": "code",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "图片url",
+  "name": "picUrl",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}]

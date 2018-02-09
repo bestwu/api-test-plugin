@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven { url 'http://repo.spring.io/plugins-release/' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'cn.bestwu.gradle:api-test-plugin:0.0.1-SNAPSHOT'
+    }
+}
+apply plugin: 'java'
+
+apply plugin: 'cn.bestwu.api.test'
+
+group 'cn.bestwu.gradle'
+version '1.0'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+profile {
+    actives = actives + 'a'
+}
+
+task before(dependsOn: clean) {
+    doLast {
+        println '-------------before-------------'
+    }
+}
+
+
+task publishJar(dependsOn: [before, jar]) {
+
+}

@@ -1,0 +1,605 @@
+[ {
+  "desc": "库存",
+  "id": "saleTun",
+  "name": "saleTun",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+},
+  {
+    "desc": "属性",
+    "id": "properties",
+    "name": "properties",
+    "nullable": true,
+    "expanded": false,
+    "type": "Map<String,String>",
+    "value": null
+  },
+  {
+    "desc": "图片url",
+    "id": "picUrls",
+    "name": "picUrls",
+    "nullable": true,
+    "type": "Array<String>",
+    "value": null
+  },
+  {
+  "desc": "工厂",
+  "id": "factorys",
+  "name": "factorys",
+  "nullable": true,
+  "type": "Array<Factory>",
+  "value": null
+},{
+  "desc": "图片url",
+  "id": "picUrl",
+  "name": "picUrl",
+  "nullable": true,
+  "type": "String",
+  "value": null
+},
+  {
+    "desc": "优惠政策",
+    "name": "policies",
+    "nullable": true,
+    "type": "Array<String>",
+    "value": null
+  },
+  {
+    "desc": "品牌名称",
+    "id": "brand",
+    "name": "brand",
+    "nullable": true,
+    "type": "String",
+    "value": null
+  },{
+  "desc": "单价",
+  "id": "price",
+  "name": "price",
+  "nullable": true,
+  "type": "BigDecimal",
+  "value": null
+},{
+  "desc": "物料ID",
+  "name": "materialId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料编码",
+  "name": "materialNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "基本计量单位",
+  "name": "baseUom",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "创建日期",
+  "name": "createDate",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "物料所属产品类别",
+  "name": "prodType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料组",
+  "name": "matlGroup",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料类型",
+  "name": "matlType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料名称",
+  "name": "materialName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料大类",
+  "name": "bigCat",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料中类",
+  "name": "midCat",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "总养分含量",
+  "name": "nutrient",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "有机无机",
+  "name": "organic",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "氮属性",
+  "name": "n",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "磷属性",
+  "name": "p",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "钾属性",
+  "name": "k",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "生产工艺",
+  "name": "technology",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "配方结构",
+  "name": "proportion",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品牌编码",
+  "name": "brandNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "规格",
+  "name": "spec",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "颜色",
+  "name": "color",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "特殊属性",
+  "name": "sAttr",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "碘添加",
+  "name": "saltI",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "防松剂",
+  "name": "saltAntiLoos",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "辅料种类",
+  "name": "saltAuxi",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "用户自定义名称",
+  "name": "saltCustom",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "颗粒及纯度",
+  "name": "saltParticle",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "省",
+  "name": "saltProvince",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "市分公司",
+  "name": "saltCity",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "包装来源",
+  "name": "saltPack",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "包装特殊属性",
+  "name": "saltPackSpe",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "包装种类",
+  "name": "packType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品牌分类",
+  "name": "brand",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "长",
+  "name": "length",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "高",
+  "name": "height",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "宽",
+  "name": "width",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "长度宽度高度的度量单位",
+  "name": "unitDim",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "毛重",
+  "name": "grossWeight",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "净重",
+  "name": "netWeight",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "重量单位",
+  "name": "unitOfWt",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "总容量",
+  "name": "grossCont",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "净容量",
+  "name": "netCont",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "容量单位",
+  "name": "contUnit",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "电商标志",
+  "name": "onlineFlag",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "制造商编码",
+  "name": "manufactorNo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "制造商名称",
+  "name": "manufactor",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "供应商ID",
+  "name": "supplierId",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "供应商名称",
+  "name": "supplier",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "商品条码",
+  "name": "barCode",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "一级商品类别",
+  "name": "catOne",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "二级商品类别",
+  "name": "catTwo",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "三级商品类别",
+  "name": "catThree",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "商品成本价",
+  "name": "costPrice",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "生产日期",
+  "name": "productionDate",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "有效期",
+  "name": "expDate",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "标准价",
+  "name": "standPrice",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "税率",
+  "name": "tax",
+  "nullable": true,
+  "type": "Short(0)",
+  "value": null
+}, {
+  "desc": "物料状态日期",
+  "name": "statusDate",
+  "nullable": true,
+  "type": "Long",
+  "value": null
+}, {
+  "desc": "物料状态",
+  "name": "status",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "该记录是否已被删除",
+  "name": "isDelete",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料别名",
+  "name": "alias",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品类",
+  "name": "categoryProperty",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品牌名称",
+  "name": "brandName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "副品牌",
+  "name": "subBrand",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "肥料类型",
+  "name": "fertilizerType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "原料来源",
+  "name": "sourceRaw",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "大类编码",
+  "name": "bigCode",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料描述",
+  "name": "materialDesc",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "产品组",
+  "name": "prodGroup",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "产品组描述",
+  "name": "prodGroupDesc",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "物料组描述",
+  "name": "matlGroupDesc",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "产品名称",
+  "name": "name",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "工厂",
+  "name": "factory",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品牌",
+  "name": "brand",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "MaterialProduct_brand"
+}, {
+  "desc": "品系",
+  "name": "strain",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "品类",
+  "name": "category",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "大类",
+  "name": "bigClass",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "配比",
+  "name": "mixtureRatio",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "养分",
+  "name": "nutrient",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "MaterialProduct_nutrient"
+}, {
+  "desc": "包装类型",
+  "name": "packingType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "产地",
+  "name": "placeOfOrigin",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "CRM名称",
+  "name": "crmName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "产品类型",
+  "name": "materialType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "特点",
+  "name": "characteristic",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "",
+  "name": "isOnSale",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "",
+  "name": "picUrl",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "产品描述",
+  "name": "materialDetail",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "工厂ID",
+  "name": "factoryId",
+  "nullable": false,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "工厂名称",
+  "name": "factoryName",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "工厂类型(01,)",
+  "name": "factoryType",
+  "nullable": true,
+  "type": "String",
+  "value": null
+}, {
+  "desc": "状态(0)",
+  "name": "status",
+  "nullable": true,
+  "type": "String",
+  "value": null,
+  "id": "Factory_status"
+}]
