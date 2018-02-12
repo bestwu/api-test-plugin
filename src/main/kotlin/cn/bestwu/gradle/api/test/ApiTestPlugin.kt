@@ -6,6 +6,7 @@ import cn.bestwu.gradle.profile.ProfileExtension
 import cn.bestwu.gradle.profile.ProfilePlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.UnknownTaskException
 import org.gradle.jvm.tasks.Jar
 
 /**
@@ -61,6 +62,14 @@ class ApiTestPlugin : Plugin<Project> {
                     }
                 }
             }
+        }
+
+        try {
+            project.tasks.getByName("processResources") {
+                it.dependsOn("htmldoc")
+            }
+        } catch (e: UnknownTaskException) {
+            println(e.message)
         }
     }
 
