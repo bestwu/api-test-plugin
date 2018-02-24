@@ -22,8 +22,8 @@ class ApiTestPlugin : Plugin<Project> {
         project.plugins.apply(ProfilePlugin::class.java)
 
         project.afterEvaluate {
-            val version = it.findProperty("api.test.version") ?: "1.3.8-SNAPSHOT"
-            val starterDocVersion = it.findProperty("api.starter-doc.version") ?: "0.0.1-SNAPSHOT"
+            val version = it.findProperty("api.test.version") ?: "1.3.8"
+            val starterDocVersion = it.findProperty("api.starter-doc.version") ?: "0.0.1"
             project.dependencies.add("compile", "cn.bestwu:api-test:$version")
             project.dependencies.add("compileOnly", "cn.bestwu:starter-apidoc:$starterDocVersion")
             project.dependencies.add("testCompile", "cn.bestwu:starter-apidoc:$starterDocVersion")
