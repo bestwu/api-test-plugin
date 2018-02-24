@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "cn.bestwu.gradle"
-version = "0.0.1"
+version = "0.0.7"
 
 tasks.withType(JavaCompile::class.java) {
     options.encoding = "UTF-8"
@@ -17,14 +17,15 @@ tasks.withType(JavaCompile::class.java) {
 
 repositories {
     mavenLocal()
+    gradlePluginPortal()
     jcenter()
 }
 
 dependencies {
     compile(gradleApi())
     compile("org.jetbrains.kotlin:kotlin-stdlib:1.2.21")
-    compile("cn.bestwu.gradle:profile-plugin:1.4.7")
-    compile("cn.bestwu.gradle:apidoc-plugin:1.2.8")
+    compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.7")
+    compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.8")
 
     testCompile("org.jetbrains.kotlin:kotlin-test-junit:1.2.21")
 }
