@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "cn.bestwu.gradle"
-version = "0.0.8"
+version = "0.0.9"
 
 tasks.withType(JavaCompile::class.java) {
     options.encoding = "UTF-8"
