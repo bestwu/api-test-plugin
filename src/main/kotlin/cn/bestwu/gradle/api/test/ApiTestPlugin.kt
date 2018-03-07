@@ -51,14 +51,6 @@ class ApiTestPlugin : Plugin<Project> {
         }
 
         project.extensions.configure(ProfileExtension::class.java) {
-            it.closure = arrayOf()
-            it.closure {
-                val jar = project.tasks.getByName("jar") as Jar
-                jar.filesMatching("application-*.yml") { f ->
-                    if (f.sourceName != "application-${it.active}.yml")
-                        f.exclude()
-                }
-            }
             it.releaseClosure {
                 val jar = project.tasks.getByName("jar") as Jar
                 jar.exclude(paths)
