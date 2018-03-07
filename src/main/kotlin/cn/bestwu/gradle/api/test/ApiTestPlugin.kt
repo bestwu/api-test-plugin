@@ -7,7 +7,6 @@ import cn.bestwu.gradle.profile.ProfilePlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.UnknownTaskException
-import org.gradle.internal.impldep.org.junit.experimental.categories.Categories
 import org.gradle.jvm.tasks.Jar
 
 /**
@@ -57,7 +56,7 @@ class ApiTestPlugin : Plugin<Project> {
                 val jar = project.tasks.getByName("jar") as Jar
                 jar.filesMatching("application-*.yml") { f ->
                     if (f.sourceName != "application-${it.active}.yml")
-                        Categories.CategoryFilter.exclude()
+                        f.exclude()
                 }
             }
             it.releaseClosure {
