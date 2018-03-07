@@ -50,16 +50,13 @@ class ApiTestPlugin : Plugin<Project> {
                 it.projectName = applicationName!!
         }
 
-        val releases = ((project.findProperty("api.test.releases")
-                ?: "release") as String).split(",").filter { it.isNotBlank() }.map { it.trim() }
         project.extensions.configure(ProfileExtension::class.java) {
-            it.closure {
-                if (releases.contains(it.active)) {
-                    val jar = project.tasks.getByName("jar") as Jar
-                    jar.exclude(paths)
-                    project.configurations.getByName("compile").dependencies.removeIf {
-                        it.group == "cn.bestwu" && it.name == "api-test"
-                    }
+            it.closure = arrayOf()
+            it.releaseClosure {
+                val jar = project.tasks.getByName("jar") as Jar
+                jar.exclude(paths)
+                project.configurations.getByName("compile").dependencies.removeIf {
+                    it.group == "cn.bestwu" && it.name == "api-test"
                 }
             }
         }
