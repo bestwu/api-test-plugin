@@ -7,6 +7,13 @@ import cn.bestwu.gradle.profile.ProfilePlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.UnknownTaskException
+import org.gradle.api.distribution.DistributionContainer
+import org.gradle.api.distribution.plugins.DistributionPlugin
+import org.gradle.api.internal.file.collections.SimpleFileCollection
+import org.gradle.api.plugins.ApplicationPlugin
+import org.gradle.api.plugins.JavaPluginConvention
+import org.gradle.api.tasks.SourceSet
+import org.gradle.api.tasks.application.CreateStartScripts
 import org.gradle.jvm.tasks.Jar
 
 /**
@@ -21,13 +28,12 @@ class ApiTestPlugin : Plugin<Project> {
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
 
-        project.afterEvaluate {
-            val version = it.findProperty("api.test.version") ?: "1.3.9"
-            val starterDocVersion = it.findProperty("api.starter-doc.version") ?: "0.0.4"
-            project.dependencies.add("compile", "cn.bestwu:api-test:$version")
-            project.dependencies.add("compileOnly", "cn.bestwu:starter-apidoc:$starterDocVersion")
-            project.dependencies.add("testCompile", "cn.bestwu:starter-apidoc:$starterDocVersion")
-        }
+        val version = project.findProperty("api.test.version") ?: "1.3.9"
+        val starterDocVersion = project.findProperty("api.starter-doc.version") ?: "0.0.4"
+        project.configurations.create(Companion.API_TEST_COMPILE_CONFIGURATION_NAME)
+        project.dependencies.add(Companion.API_TEST_COMPILE_CONFIGURATION_NAME, "cn.bestwu:api-test:$version")
+        project.dependencies.add("compileOnly", "cn.bestwu:starter-apidoc:$starterDocVersion")
+        project.dependencies.add("testCompile", "cn.bestwu:starter-apidoc:$starterDocVersion")
 
         val paths = ((project.findProperty("api.test.paths")
                 ?: "_t") as String).split(",").filter { it.isNotBlank() }.map { it.trim() }
@@ -49,17 +55,27 @@ class ApiTestPlugin : Plugin<Project> {
             if (!applicationName.isNullOrBlank())
                 it.projectName = applicationName!!
         }
-
         project.extensions.configure(ProfileExtension::class.java) {
+            it.closure {
+                if (!it.releases.contains(it.active) && !tasks.getByName("startScripts").state.executed) {
+                    val configuration = project.configurations.getByName(API_TEST_COMPILE_CONFIGURATION_NAME)
+                    project.extensions.getByType(DistributionContainer::class.java).getAt(DistributionPlugin.MAIN_DISTRIBUTION_NAME).contents {
+                        val startScripts = project.tasks.getByName(ApplicationPlugin.TASK_START_SCRIPTS_NAME) as CreateStartScripts
+                        startScripts.classpath += configuration
+                        val libChildSpec = project.copySpec()
+                        libChildSpec.into("lib")
+                        libChildSpec.from(configuration)
+                        it.with(libChildSpec)
+                    }
+                    val sourceSet = project.convention.getPlugin(JavaPluginConvention::class.java).sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)
+                    sourceSet.runtimeClasspath = SimpleFileCollection((sourceSet.runtimeClasspath + configuration).distinct())
+                }
+            }
             it.releaseClosure {
                 val jar = project.tasks.getByName("jar") as Jar
                 jar.exclude(paths)
-                project.configurations.getByName("compile").dependencies.removeIf {
-                    it.group == "cn.bestwu" && it.name == "api-test"
-                }
             }
         }
-
         try {
             project.tasks.getByName("processResources") {
                 it.dependsOn("htmldoc")
@@ -67,6 +83,10 @@ class ApiTestPlugin : Plugin<Project> {
         } catch (e: UnknownTaskException) {
             println(e.message)
         }
+    }
+
+    companion object {
+        private const val API_TEST_COMPILE_CONFIGURATION_NAME = "apiTestCompile"
     }
 
 }

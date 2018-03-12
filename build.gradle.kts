@@ -10,7 +10,7 @@ plugins {
     id("cn.bestwu.plugin-publish") version "0.0.18"
 }
 
-group = "cn.bestwu.gradle"
+group = "gradle.plugin.cn.bestwu.gradle"
 version = "0.0.13"
 
 tasks.withType(JavaCompile::class.java) {
