@@ -2,14 +2,16 @@ import org.gradle.api.JavaVersion
 import org.gradle.api.tasks.compile.JavaCompile
 import org.gradle.kotlin.dsl.*
 
+val kotlinVersion = "1.2.30"
+
 plugins {
     idea
-    kotlin("jvm") version "1.2.21"
-    id("cn.bestwu.plugin-publish") version "0.0.17"
+    kotlin("jvm") version "1.2.30"
+    id("cn.bestwu.plugin-publish") version "0.0.18"
 }
 
 group = "cn.bestwu.gradle"
-version = "0.0.12"
+version = "0.0.13"
 
 tasks.withType(JavaCompile::class.java) {
     options.encoding = "UTF-8"
@@ -23,11 +25,11 @@ repositories {
 
 dependencies {
     compile(gradleApi())
-    compile("org.jetbrains.kotlin:kotlin-stdlib:1.2.21")
-    compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.13")
-    compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.8")
+    compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+    compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.14")
+    compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.9")
 
-    testCompile("org.jetbrains.kotlin:kotlin-test-junit:1.2.21")
+    testCompile("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
 
 idea {
