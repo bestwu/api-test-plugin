@@ -11,6 +11,7 @@ import org.gradle.api.distribution.DistributionContainer
 import org.gradle.api.distribution.plugins.DistributionPlugin
 import org.gradle.api.internal.file.collections.SimpleFileCollection
 import org.gradle.api.plugins.ApplicationPlugin
+import org.gradle.api.plugins.JavaPlugin
 import org.gradle.api.plugins.JavaPluginConvention
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.application.CreateStartScripts
@@ -55,10 +56,13 @@ class ApiTestPlugin : Plugin<Project> {
             if (!applicationName.isNullOrBlank())
                 it.projectName = applicationName!!
         }
+        val configuration = project.configurations.getByName(API_TEST_COMPILE_CONFIGURATION_NAME)
+        val sourceSet = project.convention.getPlugin(JavaPluginConvention::class.java).sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)
+        sourceSet.runtimeClasspath += configuration
+
         project.extensions.configure(ProfileExtension::class.java) {
             it.closure {
                 if (!it.releases.contains(it.active) && !tasks.getByName("startScripts").state.executed) {
-                    val configuration = project.configurations.getByName(API_TEST_COMPILE_CONFIGURATION_NAME)
                     project.extensions.getByType(DistributionContainer::class.java).getAt(DistributionPlugin.MAIN_DISTRIBUTION_NAME).contents {
                         val startScripts = project.tasks.getByName(ApplicationPlugin.TASK_START_SCRIPTS_NAME) as CreateStartScripts
                         startScripts.classpath += configuration
@@ -67,13 +71,14 @@ class ApiTestPlugin : Plugin<Project> {
                         libChildSpec.from(configuration)
                         it.with(libChildSpec)
                     }
-                    val sourceSet = project.convention.getPlugin(JavaPluginConvention::class.java).sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)
-                    sourceSet.runtimeClasspath = SimpleFileCollection((sourceSet.runtimeClasspath + configuration).distinct())
+                    sourceSet.runtimeClasspath = SimpleFileCollection((sourceSet.runtimeClasspath).distinct())
                 }
             }
             it.releaseClosure {
                 val jar = project.tasks.getByName("jar") as Jar
                 jar.exclude(paths)
+                @Suppress("DEPRECATION")
+                sourceSet.runtimeClasspath -= configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
             }
         }
         try {
