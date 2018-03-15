@@ -62,7 +62,7 @@ class ApiTestPlugin : Plugin<Project> {
 
         project.extensions.configure(ProfileExtension::class.java) {
             it.closure {
-                if (!it.releases.contains(it.active) && !tasks.getByName("startScripts").state.executed) {
+                if (!it.releases.contains(it.active) && !tasks.getByName(JavaPlugin.COMPILE_JAVA_TASK_NAME).state.executed) {
                     project.extensions.getByType(DistributionContainer::class.java).getAt(DistributionPlugin.MAIN_DISTRIBUTION_NAME).contents {
                         val startScripts = project.tasks.getByName(ApplicationPlugin.TASK_START_SCRIPTS_NAME) as CreateStartScripts
                         startScripts.classpath += configuration
