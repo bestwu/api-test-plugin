@@ -25,6 +25,7 @@ import org.gradle.jvm.tasks.Jar
  */
 class ApiTestPlugin : Plugin<Project> {
 
+    @Suppress("DEPRECATION")
     override fun apply(project: Project) {
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
@@ -65,11 +66,11 @@ class ApiTestPlugin : Plugin<Project> {
                 if (!it.releases.contains(it.active) && !tasks.getByName(JavaPlugin.COMPILE_JAVA_TASK_NAME).state.executed) {
                     project.extensions.getByType(DistributionContainer::class.java).getAt(DistributionPlugin.MAIN_DISTRIBUTION_NAME).contents {
                         val startScripts = project.tasks.getByName(ApplicationPlugin.TASK_START_SCRIPTS_NAME) as CreateStartScripts
-                        startScripts.classpath += configuration
-                        val libChildSpec = project.copySpec()
-                        libChildSpec.into("lib")
-                        libChildSpec.from(configuration)
-                        it.with(libChildSpec)
+                        val addConfiguration = configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
+                        startScripts.classpath += addConfiguration
+                        it.from(addConfiguration) {
+                            it.into("lib")
+                        }
                     }
                     sourceSet.runtimeClasspath = SimpleFileCollection((sourceSet.runtimeClasspath).distinct())
                 }
@@ -77,7 +78,6 @@ class ApiTestPlugin : Plugin<Project> {
             it.releaseClosure {
                 val jar = project.tasks.getByName("jar") as Jar
                 jar.exclude(paths)
-                @Suppress("DEPRECATION")
                 sourceSet.runtimeClasspath -= configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
             }
         }
