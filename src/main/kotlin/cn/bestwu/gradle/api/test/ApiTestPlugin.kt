@@ -40,15 +40,6 @@ class ApiTestPlugin : Plugin<Project> {
         val paths = ((project.findProperty("api.test.paths")
                 ?: "_t") as String).split(",").filter { it.isNotBlank() }.map { it.trim() }
 
-        project.tasks.getByName("clean") {
-            it.doFirst {
-                paths.forEach {
-                    project.file("src/main/resources/$it/md").deleteRecursively()
-                    project.file("src/main/resources/$it/html").deleteRecursively()
-                }
-            }
-        }
-
         project.extensions.configure(ApidocExtension::class.java) {
             val applicationHost = project.findProperty("generator.application.host") as? String
             if (!applicationHost.isNullOrBlank())
