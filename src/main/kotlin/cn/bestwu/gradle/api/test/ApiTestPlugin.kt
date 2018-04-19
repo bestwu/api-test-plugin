@@ -6,15 +6,13 @@ import cn.bestwu.gradle.profile.ProfileExtension
 import cn.bestwu.gradle.profile.ProfilePlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.UnknownTaskException
 import org.gradle.api.distribution.DistributionContainer
 import org.gradle.api.distribution.plugins.DistributionPlugin
 import org.gradle.api.internal.file.collections.SimpleFileCollection
-import org.gradle.api.plugins.ApplicationPlugin
-import org.gradle.api.plugins.JavaPlugin
-import org.gradle.api.plugins.JavaPluginConvention
+import org.gradle.api.plugins.*
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.application.CreateStartScripts
+import org.gradle.jvm.tasks.Jar
 import org.gradle.language.jvm.tasks.ProcessResources
 
 /**
@@ -27,6 +25,9 @@ class ApiTestPlugin : Plugin<Project> {
 
     @Suppress("DEPRECATION")
     override fun apply(project: Project) {
+        project.plugins.apply(JavaPlugin::class.java)
+        project.plugins.apply(ApplicationPlugin::class.java)
+        project.plugins.apply(WarPlugin::class.java)
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
 
@@ -74,12 +75,48 @@ class ApiTestPlugin : Plugin<Project> {
                 sourceSet.runtimeClasspath -= configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
             }
         }
-        try {
-            project.tasks.getByName("compileJava") {
-                it.dependsOn("htmldoc")
+
+        (project.convention.plugins["application"] as ApplicationPluginConvention).applicationDefaultJvmArgs += "-Dfile.encoding=UTF-8"
+
+        project.extensions.getByType(DistributionContainer::class.java).getAt(DistributionPlugin.MAIN_DISTRIBUTION_NAME).contents {
+            it.from((project.tasks.getByName("processResources") as ProcessResources).destinationDir) {
+                it.into("resources")
             }
-        } catch (e: UnknownTaskException) {
-            println(e.message)
+        }
+
+        project.tasks.getByName("compileJava") {
+            it.dependsOn("htmldoc", "processResources")
+        }
+        project.tasks.getByName("jar") {
+            it.enabled = true
+            it as Jar
+            it.dependsOn("generateRebel")
+            it.exclude {
+                (project.tasks.getByName("processResources") as ProcessResources).destinationDir.listFiles().contains(it.file)
+            }
+            it.manifest {
+                it.attributes(mapOf("Manifest-Version" to version, "Implementation-Title" to project.property("application.name") as String, "Implementation-Version" to version))
+            }
+        }
+        project.tasks.getByName("war") {
+            it.enabled = true
+            it.mustRunAfter("clean")
+        }
+        project.tasks.getByName("distZip") {
+            it.mustRunAfter("clean")
+        }
+        project.tasks.getByName("startScripts") {
+            it as CreateStartScripts
+            it.classpath.add(project.files("\$APP_HOME/resources"))
+            it.doLast {
+                it as CreateStartScripts
+                it.unixScript.writeText(it.unixScript.readText()
+                        .replace("\$APP_HOME/lib/resources", "\$APP_HOME/resources")
+                )
+                it.windowsScript.writeText(it.windowsScript.readText()
+                        .replace("%APP_HOME%\\lib\\resources", "%APP_HOME%\\resources")
+                )
+            }
         }
     }
 
