@@ -15,7 +15,7 @@ import org.gradle.api.plugins.JavaPlugin
 import org.gradle.api.plugins.JavaPluginConvention
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.application.CreateStartScripts
-import org.gradle.jvm.tasks.Jar
+import org.gradle.language.jvm.tasks.ProcessResources
 
 /**
  *
@@ -67,13 +67,15 @@ class ApiTestPlugin : Plugin<Project> {
                 }
             }
             it.releaseClosure {
-                val jar = project.tasks.getByName("jar") as Jar
-                jar.exclude(paths)
+                project.tasks.getByName("mddoc").enabled = false
+                project.tasks.getByName("htmldoc").enabled = false
+                val processResources = project.tasks.getByName("processResources") as ProcessResources
+                processResources.exclude(paths)
                 sourceSet.runtimeClasspath -= configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
             }
         }
         try {
-            project.tasks.getByName("processResources") {
+            project.tasks.getByName("compileJava") {
                 it.dependsOn("htmldoc")
             }
         } catch (e: UnknownTaskException) {
