@@ -23,7 +23,7 @@ repositories {
 dependencies {
     compile(gradleApi())
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
-    compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.16")
+    compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.17")
     compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.10")
 
     testCompile("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
