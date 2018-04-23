@@ -31,7 +31,7 @@ class ApiTestPlugin : Plugin<Project> {
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
 
-        val version = project.findProperty("api.test.version") ?: "1.3.11"
+        val version = project.findProperty("api.test.version") ?: "1.3.12"
         val starterDocVersion = project.findProperty("api.starter-doc.version") ?: "1.2.10"
         project.configurations.create(Companion.API_TEST_COMPILE_CONFIGURATION_NAME)
         project.dependencies.add(Companion.API_TEST_COMPILE_CONFIGURATION_NAME, "cn.bestwu:api-test:$version")

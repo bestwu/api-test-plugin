@@ -3,11 +3,11 @@ import org.gradle.api.tasks.compile.JavaCompile
 import org.gradle.kotlin.dsl.*
 import org.jetbrains.dokka.gradle.DokkaTask
 
-val kotlinVersion = "1.2.30"
+val kotlinVersion = "1.2.40"
 
 plugins {
     idea
-    kotlin("jvm") version "1.2.30"
+    kotlin("jvm") version "1.2.40"
     id("cn.bestwu.plugin-publish") version "0.0.19"
 }
 
