@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "cn.bestwu.gradle"
-version = "0.0.17"
+version = "0.0.18"
 
 repositories {
     mavenLocal()
@@ -23,7 +23,7 @@ repositories {
 dependencies {
     compile(gradleApi())
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
-    compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.17")
+    compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.18")
     compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.10")
 
     testCompile("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")

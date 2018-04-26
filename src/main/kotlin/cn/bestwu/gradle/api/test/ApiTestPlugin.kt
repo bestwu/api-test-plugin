@@ -9,10 +9,11 @@ import org.gradle.api.Project
 import org.gradle.api.distribution.DistributionContainer
 import org.gradle.api.distribution.plugins.DistributionPlugin
 import org.gradle.api.internal.file.collections.SimpleFileCollection
-import org.gradle.api.plugins.*
+import org.gradle.api.plugins.ApplicationPlugin
+import org.gradle.api.plugins.JavaPlugin
+import org.gradle.api.plugins.JavaPluginConvention
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.application.CreateStartScripts
-import org.gradle.jvm.tasks.Jar
 import org.gradle.language.jvm.tasks.ProcessResources
 
 /**
@@ -25,16 +26,13 @@ class ApiTestPlugin : Plugin<Project> {
 
     @Suppress("DEPRECATION")
     override fun apply(project: Project) {
-        project.plugins.apply(JavaPlugin::class.java)
-        project.plugins.apply(ApplicationPlugin::class.java)
-        project.plugins.apply(WarPlugin::class.java)
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
 
         val version = project.findProperty("api.test.version") ?: "1.3.12"
         val starterDocVersion = project.findProperty("api.starter-doc.version") ?: "1.2.10"
-        project.configurations.create(Companion.API_TEST_COMPILE_CONFIGURATION_NAME)
-        project.dependencies.add(Companion.API_TEST_COMPILE_CONFIGURATION_NAME, "cn.bestwu:api-test:$version")
+        project.configurations.create(API_TEST_COMPILE_CONFIGURATION_NAME)
+        project.dependencies.add(API_TEST_COMPILE_CONFIGURATION_NAME, "cn.bestwu:api-test:$version")
         project.dependencies.add("compileOnly", "cn.bestwu:starter-apidoc:$starterDocVersion")
         project.dependencies.add("testCompile", "cn.bestwu:starter-apidoc:$starterDocVersion")
 
@@ -76,47 +74,8 @@ class ApiTestPlugin : Plugin<Project> {
             }
         }
 
-        (project.convention.plugins["application"] as ApplicationPluginConvention).applicationDefaultJvmArgs += "-Dfile.encoding=UTF-8"
-
-        project.extensions.getByType(DistributionContainer::class.java).getAt(DistributionPlugin.MAIN_DISTRIBUTION_NAME).contents {
-            it.from((project.tasks.getByName("processResources") as ProcessResources).destinationDir) {
-                it.into("resources")
-            }
-        }
-
         project.tasks.getByName("compileJava") {
-            it.dependsOn("htmldoc", "processResources")
-        }
-        project.tasks.getByName("jar") {
-            it.enabled = true
-            it as Jar
-            it.dependsOn("generateRebel")
-            it.exclude {
-                (project.tasks.getByName("processResources") as ProcessResources).destinationDir.listFiles().contains(it.file)
-            }
-            it.manifest {
-                it.attributes(mapOf("Manifest-Version" to version, "Implementation-Title" to project.property("application.name") as String, "Implementation-Version" to version))
-            }
-        }
-        project.tasks.getByName("war") {
-            it.enabled = true
-            it.mustRunAfter("clean")
-        }
-        project.tasks.getByName("distZip") {
-            it.mustRunAfter("clean")
-        }
-        project.tasks.getByName("startScripts") {
-            it as CreateStartScripts
-            it.classpath.add(project.files("\$APP_HOME/resources"))
-            it.doLast {
-                it as CreateStartScripts
-                it.unixScript.writeText(it.unixScript.readText()
-                        .replace("\$APP_HOME/lib/resources", "\$APP_HOME/resources")
-                )
-                it.windowsScript.writeText(it.windowsScript.readText()
-                        .replace("%APP_HOME%\\lib\\resources", "%APP_HOME%\\resources")
-                )
-            }
+            it.dependsOn("htmldoc")
         }
     }
 
