@@ -11,8 +11,8 @@ plugins {
     id("cn.bestwu.plugin-publish") version "0.0.19"
 }
 
-group = "cn.bestwu.gradle"
-version = "0.0.25"
+group = "gradle.plugin.cn.bestwu.gradle"
+version = "0.0.26"
 
 repositories {
     mavenLocal()
@@ -24,7 +24,7 @@ dependencies {
     compile(gradleApi())
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.19")
-    compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.12")
+    compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.13")
 
     testCompile("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
