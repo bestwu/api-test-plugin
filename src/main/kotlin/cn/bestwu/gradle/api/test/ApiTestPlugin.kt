@@ -8,7 +8,6 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.distribution.DistributionContainer
 import org.gradle.api.distribution.plugins.DistributionPlugin
-import org.gradle.api.internal.file.collections.SimpleFileCollection
 import org.gradle.api.plugins.ApplicationPlugin
 import org.gradle.api.plugins.JavaPlugin
 import org.gradle.api.plugins.JavaPluginConvention
@@ -29,15 +28,12 @@ class ApiTestPlugin : Plugin<Project> {
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
 
-        val version = project.findProperty("api.test.version") ?: "1.3.12"
+        val version = project.findProperty("api.test.version") ?: "1.3.13"
         val starterDocVersion = project.findProperty("api.starter-doc.version") ?: "1.2.11"
         project.configurations.create(API_TEST_COMPILE_CONFIGURATION_NAME)
         project.dependencies.add(API_TEST_COMPILE_CONFIGURATION_NAME, "cn.bestwu:api-test:$version")
         project.dependencies.add("compileOnly", "cn.bestwu:starter-apidoc:$starterDocVersion")
         project.dependencies.add("testCompile", "cn.bestwu:starter-apidoc:$starterDocVersion")
-
-        val paths = ((project.findProperty("api.test.paths")
-                ?: "_t") as String).split(",").filter { it.isNotBlank() }.map { it.trim() }
 
         project.extensions.configure(ApidocExtension::class.java) {
             val applicationHost = project.findProperty("generator.application.host") as? String
@@ -47,35 +43,35 @@ class ApiTestPlugin : Plugin<Project> {
             if (!applicationName.isNullOrBlank())
                 it.projectName = applicationName!!
         }
-        val configuration = project.configurations.getByName(API_TEST_COMPILE_CONFIGURATION_NAME)
-        val sourceSet = project.convention.getPlugin(JavaPluginConvention::class.java).sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)
-        sourceSet.runtimeClasspath += configuration
 
+        project.tasks.getByName("compileJava") {
+            it.dependsOn("htmldoc")
+        }
+
+        val configuration = project.configurations.getByName(API_TEST_COMPILE_CONFIGURATION_NAME)
+        val addConfiguration = configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
+        val sourceSet = project.convention.getPlugin(JavaPluginConvention::class.java).sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)
+        sourceSet.runtimeClasspath += addConfiguration
         project.extensions.configure(ProfileExtension::class.java) {
             it.closure {
                 if (!it.releases.contains(it.active) && !tasks.getByName(JavaPlugin.COMPILE_JAVA_TASK_NAME).state.executed) {
                     project.extensions.getByType(DistributionContainer::class.java).getAt(DistributionPlugin.MAIN_DISTRIBUTION_NAME).contents {
                         val startScripts = project.tasks.getByName(ApplicationPlugin.TASK_START_SCRIPTS_NAME) as CreateStartScripts
-                        val addConfiguration = configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
                         startScripts.classpath += addConfiguration
                         it.from(addConfiguration) {
                             it.into("lib")
                         }
                     }
-                    sourceSet.runtimeClasspath = SimpleFileCollection((sourceSet.runtimeClasspath).distinct())
                 }
             }
             it.releaseClosure {
                 project.tasks.getByName("mddoc").enabled = false
                 project.tasks.getByName("htmldoc").enabled = false
                 val processResources = project.tasks.getByName("processResources") as ProcessResources
-                processResources.exclude(paths)
-                sourceSet.runtimeClasspath -= configuration - project.configurations.getByName(JavaPlugin.COMPILE_CONFIGURATION_NAME)
+                processResources.exclude(((project.findProperty("api.test.paths")
+                        ?: "_t") as String).split(",").filter { it.isNotBlank() }.map { it.trim() })
+                sourceSet.runtimeClasspath -= addConfiguration
             }
-        }
-
-        project.tasks.getByName("compileJava") {
-            it.dependsOn("htmldoc")
         }
     }
 
