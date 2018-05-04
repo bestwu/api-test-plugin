@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "cn.bestwu.gradle"
-version = "0.0.30"
+version = "0.0.31"
 
 repositories {
     mavenLocal()
