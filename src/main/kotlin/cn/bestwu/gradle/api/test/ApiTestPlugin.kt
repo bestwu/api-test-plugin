@@ -28,15 +28,15 @@ class ApiTestPlugin : Plugin<Project> {
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
 
-        val version = project.findProperty("api.test.version") ?: "1.3.14"
-        val starterDocVersion = project.findProperty("api.starter-doc.version") ?: "1.2.30"
+        val version = project.findProperty("apitest.version") ?: "1.3.17"
+        val starterDocVersion = project.findProperty("apidoc.version") ?: "1.2.54"
         project.configurations.create(API_TEST_COMPILE_CONFIGURATION_NAME)
         project.dependencies.add(API_TEST_COMPILE_CONFIGURATION_NAME, "cn.bestwu:api-test:$version")
         project.dependencies.add("compileOnly", "cn.bestwu:starter-apidoc:$starterDocVersion")
         project.dependencies.add("testCompile", "cn.bestwu:starter-apidoc:$starterDocVersion")
 
         project.extensions.configure(ApidocExtension::class.java) {
-            val applicationHost = project.findProperty("generator.application.host") as? String
+            val applicationHost = project.findProperty("apidoc.defaultHost") as? String
             if (!applicationHost.isNullOrBlank())
                 it.defaultHost = applicationHost!!
             val applicationName = project.findProperty("application.name") as? String
@@ -68,8 +68,7 @@ class ApiTestPlugin : Plugin<Project> {
                 project.tasks.getByName("mddoc").enabled = false
                 project.tasks.getByName("htmldoc").enabled = false
                 val processResources = project.tasks.getByName("processResources") as ProcessResources
-                processResources.exclude(((project.findProperty("api.test.paths")
-                        ?: "_t") as String).split(",").filter { it.isNotBlank() }.map { it.trim() })
+                processResources.exclude("doc")
                 sourceSet.runtimeClasspath -= addConfiguration
             }
         }

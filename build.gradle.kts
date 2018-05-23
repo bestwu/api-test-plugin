@@ -3,16 +3,16 @@ import org.gradle.api.tasks.compile.JavaCompile
 import org.gradle.kotlin.dsl.*
 import org.jetbrains.dokka.gradle.DokkaTask
 
-val kotlinVersion = "1.2.40"
+val kotlinVersion = "1.2.41"
 
 plugins {
     idea
-    kotlin("jvm") version "1.2.40"
+    kotlin("jvm") version "1.2.41"
     id("cn.bestwu.plugin-publish") version "0.0.19"
 }
 
 group = "cn.bestwu.gradle"
-version = "0.0.47"
+version = "0.0.48"
 
 repositories {
     mavenLocal()
@@ -24,7 +24,7 @@ dependencies {
     compile(gradleApi())
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     compile("gradle.plugin.cn.bestwu.gradle:profile-plugin:1.4.19")
-    compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.30")
+    compile("gradle.plugin.cn.bestwu.gradle:apidoc-plugin:1.2.54")
 
     testCompile("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
