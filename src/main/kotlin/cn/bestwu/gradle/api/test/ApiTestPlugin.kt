@@ -44,7 +44,9 @@ class ApiTestPlugin : Plugin<Project> {
                 it.projectName = applicationName!!
         }
 
-        project.tasks.getByName("mddoc").mustRunAfter("clean")
+        project.afterEvaluate {
+            project.tasks.getByName("mddoc").mustRunAfter("clean")
+        }
 
         project.tasks.getByName("compileJava") {
             it.dependsOn("htmldoc")
