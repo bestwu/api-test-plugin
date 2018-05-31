@@ -28,8 +28,8 @@ class ApiTestPlugin : Plugin<Project> {
         project.plugins.apply(ApidocPlugin::class.java)
         project.plugins.apply(ProfilePlugin::class.java)
 
-        val version = project.findProperty("apitest.version") ?: "1.3.17"
-        val starterDocVersion = project.findProperty("apidoc.version") ?: "1.2.62"
+        val version = project.findProperty("apitest.version") ?: "1.3.18"
+        val starterDocVersion = project.findProperty("apidoc.version") ?: "1.2.66"
         project.configurations.create(API_TEST_COMPILE_CONFIGURATION_NAME)
         project.dependencies.add(API_TEST_COMPILE_CONFIGURATION_NAME, "cn.bestwu:api-test:$version")
         project.dependencies.add("compileOnly", "cn.bestwu:starter-apidoc:$starterDocVersion")
