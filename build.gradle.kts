@@ -8,7 +8,7 @@ val kotlinVersion = "1.2.41"
 plugins {
     idea
     kotlin("jvm") version "1.2.41"
-    id("cn.bestwu.plugin-publish") version "0.0.19"
+    id("cn.bestwu.plugin-publish") version "0.0.30"
 }
 
 group = "cn.bestwu.gradle"
